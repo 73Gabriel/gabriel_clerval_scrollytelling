@@ -4,7 +4,7 @@
 * Clerval Gabriel
 * Dominic Yale
 * William Rathier Mailly
-  # Conception
+ # Conception
 * Clerval Gabriel
  # Technologies
 * HTML
