@@ -1,0 +1,18 @@
+<svg width="254" height="412" viewBox="0 0 254 412" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="110" y="237" width="34" height="307" fill="#4B4B4B"/>
+<rect y="191" width="254" height="46" rx="23" fill="#6C6C6C"/>
+<rect x="44" width="165" height="220" rx="43" fill="#C1A200"/>
+<circle cx="126.5" cy="111.5" r="59.5" fill="#998106"/>
+<mask id="mask0_1_417" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="50" y="44" width="152" height="131">
+<path d="M163.5 175L201.172 109.75H125.828L163.5 175Z" fill="#D9D9D9"/>
+<path d="M126.5 110L164.172 44.75H88.8279L126.5 110Z" fill="#D9D9D9"/>
+<path d="M88.5 175L126.172 109.75H50.8279L88.5 175Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_417)">
+<circle cx="126.5" cy="111.5" r="59.5" fill="#1B1B1B"/>
+</g>
+<circle cx="126.5" cy="109.5" r="13.5" fill="#998106"/>
+<circle cx="126.5" cy="109.5" r="9.5" fill="#1B1B1B"/>
+<rect width="171" height="18" rx="9" transform="matrix(1 0 0 -1 41 202)" fill="#1B1B1B"/>
+<rect width="171" height="18" rx="9" transform="matrix(1 0 0 -1 41 38)" fill="#1B1B1B"/>
+</svg>

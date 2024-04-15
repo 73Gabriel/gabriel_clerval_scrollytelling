@@ -1,0 +1,31 @@
+<svg width="412" height="389" viewBox="0 0 412 389" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M411.355 42.665L291.549 241.311L71.645 388.815L36.225 306.705L0 217.402L60.0734 79.5102L175.26 42.665L308.634 0L411.355 42.665Z" fill="#565656"/>
+<mask id="mask0_1_47" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="62" y="253" width="41" height="75">
+<ellipse cx="82.3749" cy="290.392" rx="37.835" ry="18.8115" transform="rotate(-101.582 82.3749 290.392)" fill="#1C1C1C"/>
+</mask>
+<g mask="url(#mask0_1_47)">
+<ellipse cx="82.3749" cy="290.392" rx="37.835" ry="18.8115" transform="rotate(-101.582 82.3749 290.392)" fill="#1C1C1C"/>
+<ellipse cx="95.7382" cy="287.653" rx="37.835" ry="20.9903" transform="rotate(-101.582 95.7382 287.653)" fill="#353535"/>
+</g>
+<mask id="mask1_1_47" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="181" y="152" width="71" height="85">
+<ellipse cx="216.792" cy="194.791" rx="46.7408" ry="28.4968" transform="rotate(-57.011 216.792 194.791)" fill="#1C1C1C"/>
+</mask>
+<g mask="url(#mask1_1_47)">
+<ellipse cx="216.792" cy="194.791" rx="46.7408" ry="28.4968" transform="rotate(-57.011 216.792 194.791)" fill="#1C1C1C"/>
+<ellipse cx="233.226" cy="205.459" rx="46.7408" ry="29.1313" transform="rotate(-57.011 233.226 205.459)" fill="#353535"/>
+</g>
+<mask id="mask2_1_47" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="235" y="52" width="111" height="48">
+<ellipse cx="290.308" cy="76.0076" rx="55.1571" ry="23.2259" transform="rotate(0.225162 290.308 76.0076)" fill="#1C1C1C"/>
+</mask>
+<g mask="url(#mask2_1_47)">
+<ellipse cx="290.308" cy="76.0076" rx="55.1571" ry="23.2259" transform="rotate(0.225162 290.308 76.0076)" fill="#1C1C1C"/>
+<ellipse cx="290.243" cy="92.4368" rx="55.1571" ry="23.9789" transform="rotate(0.225162 290.243 92.4368)" fill="#353535"/>
+</g>
+<mask id="mask3_1_47" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="72" y="89" width="74" height="67">
+<ellipse cx="108.645" cy="122.277" rx="41.6341" ry="26.4767" transform="rotate(-38.3888 108.645 122.277)" fill="#1C1C1C"/>
+</mask>
+<g mask="url(#mask3_1_47)">
+<ellipse cx="108.645" cy="122.277" rx="41.6341" ry="26.4767" transform="rotate(-38.3888 108.645 122.277)" fill="#1C1C1C"/>
+<ellipse cx="120.48" cy="137.215" rx="41.6341" ry="27.3542" transform="rotate(-38.3888 120.48 137.215)" fill="#353535"/>
+</g>
+</svg>
