@@ -1,0 +1,214 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/autres/espace.svg");
+}
+
+.title {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20%;
+    font-size: 4vw;
+    font-family: cursive;
+    color: white;
+}
+
+.description {
+    color: white;
+    font-size: 11px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.scroll {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    right: 40px;
+    bottom: 50%;
+}
+
+
+/*---------------------------------------------------------- 
+# Début animation scroll
+----------------------------------------------------------*/
+
+.scroll {
+    position: absolute;
+    background-image: url("img/autres/scroll2.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    transform: scale(0.6);
+    animation: updown 1s ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+    0% {
+        top: 20%;
+    }
+    100% {
+        top: 30%;
+    }
+}
+
+
+/* FIN DU SPRITESHEET DE SCROLL*/
+
+.souris {
+    position: absolute;
+}
+
+.roue {
+    position: relative;
+    top: 20px;
+    left: 41px;
+}
+
+
+/*---------------------------------------------------------- 
+# Chapitre 1
+----------------------------------------------------------*/
+
+#chapitre-1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/elements_chap1/espace.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+
+/*---------------------------------------------------------- 
+# Chapitre 2
+----------------------------------------------------------*/
+
+#chapitre-2 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/elements_chap2/fond.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+
+/*---------------------------------------------------------- 
+# Chapitre 3
+----------------------------------------------------------*/
+
+#chapitre-3 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/elements_chap3/fond_arriere.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+
+/*---------------------------------------------------------- 
+# Chapitre 4
+----------------------------------------------------------*/
+
+#chapitre4 {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*---------------------------------------------------------- 
+# Chapitre 5
+----------------------------------------------------------*/
+
+section.chapitre5 {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*---------------------------------------------------------- 
+# Chapitre 6
+----------------------------------------------------------*/
+
+section.chapitre6 {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* testing des animations spritesheet(2.2a)*/
+
+
+/* DÉBUT SPRITESHEET VOLANT START */
+
+.volant {
+    position: absolute;
+    background-image: url('../img/spritesheet/spritesheet-volant.png');
+    background-size: 100% 2500%;
+    width: 50vw;
+    height: 50vh;
+    animation-play-state: paused;
+    animation: volant 1s steps(25) infinite;
+}
+
+@keyframes volant {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -2500%;
+    }
+}
+
+
+/*  FIN DU SPRITESHEET VOLANT */
+
+
+/* DÉBUT SPRITESHEET FEU START */
+
+.feu {
+    position: absolute;
+    background-image: url("../img/spritesheet/spritesheet-feu.png");
+    width: 50vw;
+    height: 50vh;
+    right: 19vw;
+    top: 1vh;
+    background-size: 100% 2000%;
+    animation-name: feu;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-duration: 0.9s;
+    animation-timing-function: steps(20);
+}
+
+@keyframes feu {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -2000%;
+    }
+}
+
+
+/* FIN DU SPRITESHEET DE FEU*/
