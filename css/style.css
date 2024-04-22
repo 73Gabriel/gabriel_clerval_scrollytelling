@@ -157,6 +157,17 @@ header {
 /*---------------------------------------------------------- 
 # Chapitre 3
 ----------------------------------------------------------*/
+#chapitre-3.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#chapitre-3.image-container img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
 
 #chapitre-3 {
     width: 100vw;
@@ -168,7 +179,12 @@ header {
     background-size: cover;
     border: 1px solid red;
 }
+#chapitre-3 .kevin { 
 
+top:40vh;
+right:15vw;
+
+}
 
 /*---------------------------------------------------------- 
 # Chapitre 4
