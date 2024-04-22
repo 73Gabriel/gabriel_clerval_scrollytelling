@@ -93,10 +93,44 @@ header {
     border: 1px solid red;
 }
 
+#chapitre-1 .image-container img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
+
+#chapitre-1 .meteorite {
+    top: 10vh;
+    left: 10vw;
+}
+
+#chapitre-1 .terre {
+    bottom: 10vh;
+    right: 20vw;
+}
+
+#chapitre-1 .lune {
+    top: 50vh;
+    right: 1vw;
+    transform: translate(-50%, -50%);
+}
+
 
 /*---------------------------------------------------------- 
 # Chapitre 2
 ----------------------------------------------------------*/
+
+#chapitre-2 .image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#chapitre-2 .image-container img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
 
 #chapitre-2 {
     width: 100vw;
@@ -107,6 +141,16 @@ header {
     background-position: center;
     background-size: cover;
     border: 1px solid red;
+}
+
+#chapitre-2 .kevin {
+    top: 10%;
+    left: 10%;
+}
+
+#chapitre-2 .sofa {
+    bottom: 90%;
+    right: 10%;
 }
 
 
@@ -130,9 +174,15 @@ header {
 # Chapitre 4
 ----------------------------------------------------------*/
 
-#chapitre4 {
+#chapitre-4 {
     width: 100vw;
     height: 100vh;
+    background-image: url("../img/elements_chap4/fond.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
 }
 
 
@@ -140,9 +190,15 @@ header {
 # Chapitre 5
 ----------------------------------------------------------*/
 
-section.chapitre5 {
+#chapitre-5 {
     width: 100vw;
     height: 100vh;
+    background-image: url("../img/elements_chap5/fond.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
 }
 
 
@@ -150,9 +206,26 @@ section.chapitre5 {
 # Chapitre 6
 ----------------------------------------------------------*/
 
-section.chapitre6 {
+#chapitre-6 {
     width: 100vw;
     height: 100vh;
+    background-image: url("../img/elements_chap6/background.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+#chapitre-7 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/elements_chap7/espace.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
 }
 
 
