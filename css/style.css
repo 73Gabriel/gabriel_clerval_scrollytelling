@@ -3,6 +3,12 @@ body {
     margin: 0;
 }
 
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
 header {
     background-repeat: no-repeat;
     background-position: center;
@@ -101,7 +107,7 @@ header {
 
 #chapitre-1 .meteorite {
     top: 10vh;
-    left: 10vw;
+    left: 1vw;
 }
 
 #chapitre-1 .terre {
@@ -132,6 +138,16 @@ header {
     height: auto;
 }
 
+#chapitre-2 .kevin {
+    top: 30vh;
+    right: 45vw;
+}
+
+#chapitre-2 .sofa {
+    top: 50vh;
+    right: 35vw;
+}
+
 #chapitre-2 {
     width: 100vw;
     height: 100vh;
@@ -143,20 +159,11 @@ header {
     border: 1px solid red;
 }
 
-#chapitre-2 .kevin {
-    top: 10%;
-    left: 10%;
-}
-
-#chapitre-2 .sofa {
-    bottom: 90%;
-    right: 10%;
-}
-
 
 /*---------------------------------------------------------- 
 # Chapitre 3
 ----------------------------------------------------------*/
+
 #chapitre-3.image-container {
     position: relative;
     width: 100%;
@@ -169,6 +176,14 @@ header {
     height: auto;
 }
 
+.fond-avant {
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
 #chapitre-3 {
     width: 100vw;
     height: 100vh;
@@ -179,16 +194,41 @@ header {
     background-size: cover;
     border: 1px solid red;
 }
-#chapitre-3 .kevin { 
 
-top:40vh;
-right:15vw;
-
+#chapitre-3 .kevin {
+    position: absolute;
+    top: 50vh;
+    left: 40vw;
 }
+
+#chapitre-3 .pince {
+    position: absolute;
+    top: 0vh;
+    left: 39vw;
+}
+
+#chapitre-3 .casque {
+    position: absolute;
+    top: 36vh;
+    left: 40vw;
+}
+
 
 /*---------------------------------------------------------- 
 # Chapitre 4
 ----------------------------------------------------------*/
+
+#chapitre-4.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#chapitre-4.image-container img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
 
 #chapitre-4 {
     width: 100vw;
@@ -199,6 +239,40 @@ right:15vw;
     background-position: center;
     background-size: cover;
     border: 1px solid red;
+}
+
+#chapitre-4 .kevin {
+    position: absolute;
+    top: 70vh;
+    left: 40vw;
+    ;
+}
+
+#chapitre-4 .fusee {
+    position: absolute;
+    object-fit: contain;
+    right: 13vw;
+    bottom: 4vh;
+}
+
+#chapitre-4 .escalier {
+    position: absolute;
+    object-fit: contain;
+    right: 26vw;
+    bottom: 6vh;
+}
+
+#chapitre-4 .feu {
+    position: absolute;
+    background-image: url("../img/spritesheet/spritesheet-feu.png");
+    width: 9.5vw;
+    height: 16.6vh;
+    right: 19vw;
+    bottom: 1vh;
+    animation-name: feu;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
 }
 
 
@@ -217,6 +291,26 @@ right:15vw;
     border: 1px solid red;
 }
 
+#chapitre-5 .kevin {
+    position: absolute;
+    top: 17vh;
+    left: 33vw;
+    z-index: 2;
+}
+
+#chapitre-5 .volant {
+    position: absolute;
+    top: 40vh;
+    left: 37vw;
+    z-index: 1;
+}
+
+#chapitre-5 .bombe {
+    position: absolute;
+    bottom: 0vh;
+    right: 20vh;
+}
+
 
 /*---------------------------------------------------------- 
 # Chapitre 6
@@ -233,6 +327,54 @@ right:15vw;
     border: 1px solid red;
 }
 
+#chapitre-6 .fusee {
+    position: absolute;
+    object-fit: contain;
+    width: 20vw;
+    height: 77vh;
+    left: 23vw;
+    bottom: 4vh;
+}
+
+#chapitre-6 .kevin {
+    position: absolute;
+    top: 70vh;
+    left: 40vw;
+}
+
+#chapitre-6 .bombe {
+    position: absolute;
+    top: 70vh;
+    left: 40vw;
+}
+
+.explosion {
+    position: absolute;
+    object-fit: contain;
+    top: 15vh;
+    right: 13vw;
+    display: none;
+}
+
+#chapitre-6 .feu {
+    position: absolute;
+    background-image: url("../img/spritesheet/spritesheet-feu.png");
+    width: 9.5vw;
+    height: 16.6vh;
+    background-size: 100% 2000%;
+    animation-name: feu;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    left: 28vw;
+    bottom: 1vh;
+}
+
+
+/*---------------------------------------------------------- 
+# Chapitre 7
+----------------------------------------------------------*/
+
 #chapitre-7 {
     width: 100vw;
     height: 100vh;
@@ -244,13 +386,35 @@ right:15vw;
     border: 1px solid red;
 }
 
+.meteorite1 {
+    position: absolute;
+    object-fit: contain;
+    left: 32vw;
+    top: 25vh;
+}
+
+.meteorite2 {
+    position: absolute;
+    object-fit: contain;
+    left: 47.1vw;
+    top: 28.9vh;
+}
+
+.meteorite3 {
+    position: absolute;
+    object-fit: contain;
+    left: 35.6vw;
+    top: 51vh;
+}
+
 
 /* testing des animations spritesheet(2.2a)*/
 
 
 /* DÉBUT SPRITESHEET VOLANT START */
 
-.volant {
+
+/*  .volant {
     position: absolute;
     background-image: url('../img/spritesheet/spritesheet-volant.png');
     background-size: 100% 2500%;
@@ -275,22 +439,22 @@ right:15vw;
 
 /* DÉBUT SPRITESHEET FEU START */
 
-.feu {
+#chapitre-4 .feu {
     position: absolute;
     background-image: url("../img/spritesheet/spritesheet-feu.png");
-    width: 50vw;
-    height: 50vh;
-    right: 19vw;
-    top: 1vh;
+    width: 9.5vw;
+    height: 16.6vh;
     background-size: 100% 2000%;
     animation-name: feu;
-    animation-play-state: paused;
+    animation-duration: 0.8s;
     animation-iteration-count: infinite;
-    animation-duration: 0.9s;
     animation-timing-function: steps(20);
+    right: 19vw;
+    bottom: -0.05vh;
 }
 
-@keyframes feu {
+
+/* @keyframes feu {
     from {
         background-position: 0 0;
     }
