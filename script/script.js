@@ -30,17 +30,17 @@ gsap.to('.scroll', {
 // Animation du texte prologue (chapitre 0)
 gsap.to('.chp0', {
     duration: 20,
-    y: '600%',
+    y: '900%',
     scale: 0.5,
     ease: "power1.in",
-    onStart: () => document.querySelector('.chp2').style.bottom = 'auto',
     scrollTrigger: {
         trigger: '.chp0',
-        start: 'top center',
+        start: 'top 20%',
         end: 'top 100px',
         pin: true,
-        scrub: true,
-        markers: true
+        scrub: 1,
+        markers: true,
+
     }
 });
 // Animation de la terre qui scale in et out avec le scroll(chapitre2)
@@ -61,10 +61,10 @@ gsap.to('.terre', {
 gsap.to('.meteorite', {
     scrollTrigger: {
         trigger: '#chapitre-1',
-        start: 'top bottom', // Animation starts when the top of #chapitre-1 hits the bottom of the viewport
-        end: 'bottom top', // Animation ends when the bottom of #chapitre-1 hits the top of the viewport
-        scrub: true, // Smooth transition linked to the scroll position
-        markers: true // Optional: shows start and end points for debugging
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+        markers: true
     },
     x: '40vw',
     ease: 'none'
@@ -80,7 +80,7 @@ function animateElements() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: pince,
-            start: 'top 20%',
+            start: 'top 30%',
             end: 'bottom center',
             scrub: true,
             markers: true
@@ -109,11 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// animation du spritesheet de feu
 function feu() {
-
     const spritesheet = document.querySelector('#chapitre-4 .feu');
-
 
     const tl = gsap.timeline({
         scrollTrigger: {
@@ -126,9 +123,9 @@ function feu() {
 
 
     tl.to(spritesheet, {
-        backgroundPositionY: '-2000%',
+        backgroundPosition: '0 -2000%',
         ease: 'steps(20)',
-        duration: 0.8,
+        duration: 1,
         repeat: -1
     });
 }
@@ -136,9 +133,6 @@ function feu() {
 document.addEventListener('DOMContentLoaded', () => {
     feu();
 });
-
-
-
 
 
 // Animation du paralaxe avec la fusee dans le chapitre 4

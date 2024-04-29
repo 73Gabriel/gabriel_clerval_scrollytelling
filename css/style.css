@@ -112,7 +112,7 @@ footer {
 
 .chp0 {
     position: absolute;
-    bottom: 50vh;
+    bottom: 20vh;
     width: 100%;
     text-align: center;
     transform-origin: 50% 100%;
@@ -196,7 +196,8 @@ footer {
     font-size: 40px;
     top: 20vh;
     text-align: center;
-    color: var(--blanc)
+    color: var(--blanc);
+    z-index: 2;
 }
 
 #chapitre-2 .sofa {
@@ -330,10 +331,6 @@ footer {
     background-image: url("../img/spritesheet/spritesheet-feu.png");
     width: 9.5vw;
     height: 16.6vh;
-    animation-name: feu;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(20);
-    animation-play-state: paused;
     background-size: 100% 2000%;
     right: 36vw;
     bottom: 16vh;
@@ -390,6 +387,19 @@ footer {
     bottom: -10vh;
     left: 33vw;
     z-index: 2;
+}
+
+#chapitre-5 .volant {
+    position: absolute;
+    background-image: url('../img/spritesheet/spritesheet-volant.png');
+    background-size: 100% 2500%;
+    width: 37vw;
+    height: 33vh;
+    top: 35vh;
+    left: 30vw;
+    z-index: 1;
+    animation-play-state: paused;
+    animation: volant 1s steps(25) infinite;
 }
 
 
@@ -514,13 +524,34 @@ footer {
     top: 51vh;
 }
 
+ul.technique-gsap {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 10px;
+    font-family: monospace;
+    font-weight: 400;
+    width: auto;
+    display: inline-block;
+    padding: 10px 20px 12px 20px;
+    margin: 0;
+    max-width: 300px;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+ul.technique-gsap li {
+    margin: 5px 0;
+}
+
 
 /* testing des animations spritesheet(2.2a)*/
 
 
 /* DÉBUT SPRITESHEET VOLANT START */
 
-#chapitre-5 .volant {
+.volant {
     position: absolute;
     background-image: url('../img/spritesheet/spritesheet-volant.png');
     background-size: 100% 2500%;
@@ -533,8 +564,7 @@ footer {
     animation: volant 1s steps(25) infinite;
 }
 
-
-/* @keyframes volant {
+@keyframes volant {
     0% {
         background-position: 0 0;
     }
@@ -542,7 +572,6 @@ footer {
         background-position: 0 -2500%;
     }
 }
- */
 
 
 /*  FIN DU SPRITESHEET VOLANT */
@@ -550,8 +579,22 @@ footer {
 
 /* DÉBUT SPRITESHEET FEU START */
 
+.feu {
+    position: absolute;
+    background-image: url("../img/spritesheet/spritesheet-feu.png");
+    width: 9.5vw;
+    height: 16.6vh;
+    animation-name: feu;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    /* animation-play-state: paused; */
+    background-size: 100% 2000%;
+    right: 36vw;
+    bottom: 16vh;
+}
 
-/* @keyframes feu {
+@keyframes feu {
     from {
         background-position: 0 0;
     }

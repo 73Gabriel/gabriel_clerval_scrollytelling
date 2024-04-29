@@ -31,6 +31,18 @@
     <main>
         <!-- ---------- Début prologue-------------------- -->
         <section id="prologue">
+            <ul class="technique-gsap">
+                <li>déplacement sur Y, du texte</li>
+                <li>scale du texte</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>start,end</li>
+                        <li>pin</li>
+                        <li>scrub</li>
+                    </ul>
+                </li>
+            </ul>
             <p class="chp0">BULLETIN DE NOUVELLES: NOUS SOMMES DANS LES ANNÉES 2077, UNE MÉTÉORITE VENANT D'UNE AUTRE DIMENSION SE DIRIGE VERS LA TERRE, LES SCIENTIFIQUES OBSERVANT CE PHÉNOMÈNE ON RÉUSSIT A CONCLURE QUE LA MÉTÉORITE EST UN COUSIN ÉLOIGNER DE CELLE QUI
                 AVAIT TERRASSÉ LES DINOSAURES Y FUT DES MILLIARDS D'ANNÉES.IL SEMBLERAIT QU'ELLE SERAIT VENUE FINIR LE TRAVAILLE NON COMPLÉTÉ DE SON COUSIN.CE N'EST PAS UN EXERCICE, NOUS AVONS BESOIN D'UN HÉROS!OU SONT NOS HÉROS LORSQU'ON EN A BESOIN.</p>
 
@@ -38,6 +50,23 @@
         <!-- ---------- Fin  prologue -------------------- -->
         <!-- ---------- Début Chapitre 1 ------------------ -->
         <section id="chapitre-1">
+            <ul class="technique-gsap">
+                <li>déplacement sur X, de la météorite</li>
+                <li>gsap.to()</li>
+                <li>scale de la terre</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>start ,end</li>
+                        <li>scrub</li>
+                        <li>scale</li>
+                        <li>ease</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+
             <div class="image-container">
                 <img class="meteorite" src="img/elements_chap1/meteorite.svg" alt="meteorite">
                 <img class="terre" src="img/elements_chap1/terre.svg" alt="terre">
@@ -47,7 +76,33 @@
         </section>
         <!-- ---------- Début chapitre 2 -------------------- -->
         <section id="chapitre-2">
+            <ul class="technique-gsap">
+                <li>déplacement sur Y, de Kevin</li>
+                <li>gsap.timeline()</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>start, end</li>
+                        <li>scrub</li>
+                        <li>pin</li>
+                        <li>pin spacing</li>
+                    </ul>
+                </li>
+            </ul>
             <p class="chp2">En voyant cela aux nouvelles Kevin ferma la télévision et se précipita dans son garage en utilisant une trappe en dessous de son sofa</p>
+            <ul class="technique-gsap">
+
+                <li>gsap.to()</li>
+                <li>scrollTrigger(coming soon but for now)
+                    <ul>
+                        <li>duration</li>
+                        <li>y</li>
+                        <li>scale</li>
+                        <li>ease</li>
+                        <li>pin spacing</li>
+                    </ul>
+                </li>
+            </ul>
             <div class="image-container">
                 <img class="kevin" src="img/elements_chap2/kevin.svg" alt="kevin" />
                 <img class="sofa" src="img/elements_chap2/sofa.svg" alt="sofa" />
@@ -57,6 +112,22 @@
         </section>
         <!-- ---------- Début Chapitre 3  -------------------- -->
         <section id="chapitre-3">
+            <ul class="technique-gsap">
+                <li>déplacement sur Y, de la pince</li>
+                <li>déplacement sur Y, du casque</li>
+                <li>gsap.timeline()</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>start, end</li>
+                        <li>tl.to(casque,pince)</li>
+                        <li>duration</li>
+                        <li>ease</li>
+                        <li>yoyo</li>
+
+                    </ul>
+                </li>
+            </ul>
 
             <div class="image-container">
                 <img class="kevin" src="img/elements_chap3/kevin.svg" alt="kevin" />
@@ -71,7 +142,20 @@
         </section>
         <!-- ---------- Début Chapitre 4 -------------------- -->
         <section id="chapitre-4">
-            <p class="chp2">En voyant cela aux nouvelles Kevin ferma la télévision et se précipita dans son garage en utilisant une trappe en dessous de son sofa pour préparer sa tenue d'astronaute</p>
+            <ul class="technique-gsap">
+                <li>Paralaxe de la fusée sur les Y</li>
+                <li>gsap.timeline()</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>tl.to(fusee,feu)</li>
+                        <li>ease</li>
+                        <li>Y</li>
+
+                    </ul>
+                </li>
+            </ul>
+            <p class="chp2">Il s'envola vers l'infini et l'espace.</p>
             <div class="image-container">
 
                 <!-- <img class="kevin" src="img/elements_chap4/kevin.svg" alt="kevin" /> -->
@@ -91,6 +175,19 @@
         </section>
         <!-- ---------- Début Chapitre 5 -------------------- -->
         <section id="chapitre-5">
+            <ul class="technique-gsap">
+                <li>gsap.timeline()</li>
+                <li>rotation du volant</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>start,end</li>
+                        <li>scrub</li>
+                        <li>tl.to</li>
+                        <li>duration</li>
+                    </ul>
+                </li>
+            </ul>
             <p class="chp2">Direction la météorite!</p>
             <div class="image-container">
                 <img class="kevin" src="img/elements_chap5/kevin.svg" alt="kevin" />
@@ -103,6 +200,18 @@
         </section>
         <!-- ---------- Début  Chapitre 6 -------------------- -->
         <section id="chapitre-6">
+            <ul class="technique-gsap">
+                <li>gsap.timeline()</li>
+                <li>rotation de la bombe</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>Y</li>
+                        <li>Duration</li>
+                        <li>Ease</li>
+                    </ul>
+                </li>
+            </ul>
             <p class="chp2">Après avoir atterri sur la météorite,il lance la bombe le plus fort possible</p>
 
             <div class="image-container">
@@ -118,6 +227,20 @@
         </section>
         <!-- ---------- Début Chapitre 7 -------------------- -->
         <section id="chapitre-7">
+            <ul class="technique-gsap">
+                <li>déplacement sur X, de la bombe</li>
+                <li>gsap.to()</li>
+                <li>scrollTrigger
+                    <ul>
+                        <li>trigger=</li>
+                        <li>x</li>
+                        <li>duration</li>
+                        <li>ease</li>
+                        <li>repeat(for now)</li>
+                        <li>yoyo</li>
+                    </ul>
+                </li>
+            </ul>
             <p class="chp2">La météorite explose en trois morceaux</p>
             <div class="image-container">
                 <img class="meteorite1" src="img/elements_chap7/meteorite_p1.svg" alt=" morceaumeteorite1">
