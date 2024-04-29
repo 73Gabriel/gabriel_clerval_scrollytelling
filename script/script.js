@@ -80,7 +80,7 @@ function animateElements() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: pince,
-            start: 'top center',
+            start: 'top 20%',
             end: 'bottom center',
             scrub: true,
             markers: true
@@ -90,14 +90,14 @@ function animateElements() {
     //animation du casque qui va en bas
     tl.to([pince, casque], {
         y: '+=20vh',
-        duration: 1,
+        duration: 0.5,
         ease: 'power2.inOut'
     });
 
     // animation du haut
     tl.to(pince, {
         y: '-40vh',
-        duration: 1,
+        duration: 0.5,
         ease: 'power2.inOut',
         yoyo: true
     });
@@ -150,7 +150,7 @@ function fusee() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: fusee,
-            start: 'top bottom',
+            start: 'top 80%',
             end: 'bottom top',
             scrub: true
         }
@@ -241,7 +241,7 @@ function animationVolant() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '#chapitre-5',
-            start: 'top center',
+            start: 'top 20%',
             end: 'bottom center',
             scrub: true
         }

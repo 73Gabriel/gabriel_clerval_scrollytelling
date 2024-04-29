@@ -112,11 +112,11 @@ footer {
 
 .chp0 {
     position: absolute;
-    bottom: 40vh;
+    bottom: 50vh;
     width: 100%;
     text-align: center;
     transform-origin: 50% 100%;
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--starwars);
     white-space: pre-wrap;
 }
@@ -193,7 +193,8 @@ footer {
 }
 
 .chp2 {
-    font-size: 24px;
+    font-size: 40px;
+    top: 20vh;
     text-align: center;
     color: var(--blanc)
 }
@@ -458,15 +459,15 @@ footer {
 #chapitre-6 .feu {
     position: absolute;
     background-image: url("../img/spritesheet/spritesheet-feu.png");
-    width: 4.010vw;
-    height: 9.07vh;
+    width: 8.010vw;
+    height: 11.07vh;
     animation-name: feu;
     animation-duration: 0.8s;
     animation-iteration-count: infinite;
     background-size: 100% 2000%;
     animation-timing-function: steps(20);
-    left: 13vw;
-    bottom: -2vh;
+    left: 13.5vw;
+    bottom: 3vh;
 }
 
 
