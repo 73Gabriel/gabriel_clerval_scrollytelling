@@ -1,6 +1,17 @@
+/*--------------------------------------------------------- 
+# Styles Généraux 
+---------------------------------------------------------*/
+
+:root {
+    --starwars: #ffe031;
+    --blanc: white;
+    --footer: #0d0e20;
+}
+
 body {
     overflow-x: hidden;
     margin: 0;
+    padding: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -18,17 +29,24 @@ header {
     background-image: url("../img/autres/espace.svg");
 }
 
+footer {
+    background-color: var(--footer);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--blanc);
+}
+
 .title {
     text-align: center;
     margin-top: 0;
     padding-top: 20%;
     font-size: 4vw;
     font-family: cursive;
-    color: white;
+    color: var(--blanc);
 }
 
 .description {
-    color: white;
+    color: var(--blanc);
     font-size: 11px;
     width: 100%;
     position: absolute;
@@ -42,7 +60,7 @@ header {
     position: absolute;
     text-align: center;
     right: 40px;
-    bottom: 50%;
+    bottom: 5vh;
 }
 
 
@@ -58,16 +76,8 @@ header {
     position: relative;
     z-index: 2;
     transform: scale(0.6);
-    animation: updown 1s ease-in-out infinite alternate;
-}
-
-@keyframes updown {
-    0% {
-        top: 20%;
-    }
-    100% {
-        top: 30%;
-    }
+    /* animation: updown 1s ease-in-out infinite alternate; */
+    /* Commented out */
 }
 
 
@@ -85,12 +95,41 @@ header {
 
 
 /*---------------------------------------------------------- 
+# Prologue
+----------------------------------------------------------*/
+
+#prologue {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("../img/elements_chap1/espace.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+.chp0 {
+    position: absolute;
+    bottom: 40vh;
+    width: 100%;
+    text-align: center;
+    transform-origin: 50% 100%;
+    font-size: 2rem;
+    color: var(--starwars);
+    white-space: pre-wrap;
+}
+
+
+/*---------------------------------------------------------- 
 # Chapitre 1
 ----------------------------------------------------------*/
 
 #chapitre-1 {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: url("../img/elements_chap1/espace.svg");
     position: relative;
     background-repeat: no-repeat;
@@ -106,16 +145,24 @@ header {
 }
 
 #chapitre-1 .meteorite {
+    position: absolute;
     top: 10vh;
     left: 1vw;
+    transition: transform 0.3s ease-in-out;
 }
 
 #chapitre-1 .terre {
+    position: absolute;
+    width: 37.65vw;
+    height: 66.75vw;
     bottom: 10vh;
     right: 20vw;
+    transition: transform 0.3s ease-in-out;
 }
 
 #chapitre-1 .lune {
+    width: 13.75vw;
+    height: 24.44vh;
     top: 50vh;
     right: 1vw;
     transform: translate(-50%, -50%);
@@ -139,11 +186,21 @@ header {
 }
 
 #chapitre-2 .kevin {
-    top: 30vh;
+    width: 11.40vw;
+    height: 43.51vh;
+    top: 20vh;
     right: 45vw;
 }
 
+.chp2 {
+    font-size: 24px;
+    text-align: center;
+    color: var(--blanc)
+}
+
 #chapitre-2 .sofa {
+    width: 29.32vw;
+    height: 40.64vh;
     top: 50vh;
     right: 35vw;
 }
@@ -151,6 +208,7 @@ header {
 #chapitre-2 {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: url("../img/elements_chap2/fond.svg");
     position: relative;
     background-repeat: no-repeat;
@@ -187,6 +245,7 @@ header {
 #chapitre-3 {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: url("../img/elements_chap3/fond_arriere.svg");
     position: relative;
     background-repeat: no-repeat;
@@ -197,20 +256,28 @@ header {
 
 #chapitre-3 .kevin {
     position: absolute;
+    width: 9.53vw;
+    height: 39.53vh;
     top: 50vh;
     left: 40vw;
 }
 
 #chapitre-3 .pince {
     position: absolute;
-    top: 0vh;
-    left: 39vw;
+    width: 12.44vw;
+    height: 41vh;
+    top: 20vh;
+    left: 44vw;
+    transform: translate(-50%, -50%);
 }
 
 #chapitre-3 .casque {
     position: absolute;
+    width: 8.75vw;
+    height: 13.98vh;
     top: 36vh;
-    left: 40vw;
+    left: 44.5vw;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -224,6 +291,14 @@ header {
     height: auto;
 }
 
+#chapitre-4 img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #chapitre-4.image-container img {
     position: absolute;
     max-width: 100%;
@@ -233,6 +308,7 @@ header {
 #chapitre-4 {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: url("../img/elements_chap4/fond.svg");
     position: relative;
     background-repeat: no-repeat;
@@ -248,31 +324,45 @@ header {
     ;
 }
 
-#chapitre-4 .fusee {
-    position: absolute;
-    object-fit: contain;
-    right: 13vw;
-    bottom: 4vh;
-}
-
-#chapitre-4 .escalier {
-    position: absolute;
-    object-fit: contain;
-    right: 26vw;
-    bottom: 6vh;
-}
-
 #chapitre-4 .feu {
     position: absolute;
     background-image: url("../img/spritesheet/spritesheet-feu.png");
     width: 9.5vw;
     height: 16.6vh;
-    right: 19vw;
-    bottom: 1vh;
     animation-name: feu;
-    animation-duration: 0.8s;
     animation-iteration-count: infinite;
     animation-timing-function: steps(20);
+    animation-play-state: paused;
+    background-size: 100% 2000%;
+    right: 36vw;
+    bottom: 16vh;
+}
+
+#chapitre-4 .fusee {
+    position: absolute;
+    object-fit: contain;
+    width: 20.36vw;
+    height: 77vh;
+    left: 59.5vw;
+    bottom: 4vh;
+}
+
+.nuage1 {
+    position: absolute;
+    object-fit: contain;
+    width: 65.2vw;
+    height: 30.92vh;
+    bottom: 6vh;
+    left: 15vw;
+}
+
+.nuage2 {
+    position: absolute;
+    object-fit: contain;
+    width: 29.89vw;
+    height: 17.2vh;
+    bottom: 1vh;
+    right: 8.5vw;
 }
 
 
@@ -283,6 +373,7 @@ header {
 #chapitre-5 {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: url("../img/elements_chap5/fond.svg");
     position: relative;
     background-repeat: no-repeat;
@@ -293,20 +384,25 @@ header {
 
 #chapitre-5 .kevin {
     position: absolute;
-    top: 17vh;
+    width: 30vw;
+    height: 75vh;
+    bottom: -10vh;
     left: 33vw;
     z-index: 2;
 }
 
-#chapitre-5 .volant {
+
+/* #chapitre-5 .volant {
     position: absolute;
     top: 40vh;
     left: 37vw;
     z-index: 1;
-}
+} */
 
 #chapitre-5 .bombe {
     position: absolute;
+    width: 27.29vw;
+    height: 38.14vh;
     bottom: 0vh;
     right: 20vh;
 }
@@ -319,6 +415,7 @@ header {
 #chapitre-6 {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: url("../img/elements_chap6/background.svg");
     position: relative;
     background-repeat: no-repeat;
@@ -330,16 +427,18 @@ header {
 #chapitre-6 .fusee {
     position: absolute;
     object-fit: contain;
-    width: 20vw;
-    height: 77vh;
-    left: 23vw;
+    width: 15.93vw;
+    height: 60.83vh;
+    left: 10vw;
     bottom: 4vh;
 }
 
 #chapitre-6 .kevin {
     position: absolute;
+    width: 5.10vw;
+    height: 21.66vh;
     top: 70vh;
-    left: 40vw;
+    left: 30vw;
 }
 
 #chapitre-6 .bombe {
@@ -359,15 +458,15 @@ header {
 #chapitre-6 .feu {
     position: absolute;
     background-image: url("../img/spritesheet/spritesheet-feu.png");
-    width: 9.5vw;
-    height: 16.6vh;
-    background-size: 100% 2000%;
+    width: 4.010vw;
+    height: 9.07vh;
     animation-name: feu;
     animation-duration: 0.8s;
     animation-iteration-count: infinite;
+    background-size: 100% 2000%;
     animation-timing-function: steps(20);
-    left: 28vw;
-    bottom: 1vh;
+    left: 13vw;
+    bottom: -2vh;
 }
 
 
@@ -376,10 +475,11 @@ header {
 ----------------------------------------------------------*/
 
 #chapitre-7 {
+    position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: url("../img/elements_chap7/espace.svg");
-    position: relative;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -387,6 +487,8 @@ header {
 }
 
 .meteorite1 {
+    width: 21.45vw;
+    height: 36.01vh;
     position: absolute;
     object-fit: contain;
     left: 32vw;
@@ -394,6 +496,8 @@ header {
 }
 
 .meteorite2 {
+    width: 18.38vw;
+    height: 42.5vh;
     position: absolute;
     object-fit: contain;
     left: 47.1vw;
@@ -401,6 +505,8 @@ header {
 }
 
 .meteorite3 {
+    width: 22.34vw;
+    height: 31.48vh;
     position: absolute;
     object-fit: contain;
     left: 35.6vw;
@@ -413,18 +519,21 @@ header {
 
 /* DÉBUT SPRITESHEET VOLANT START */
 
-
-/*  .volant {
+#chapitre-5 .volant {
     position: absolute;
     background-image: url('../img/spritesheet/spritesheet-volant.png');
     background-size: 100% 2500%;
-    width: 50vw;
-    height: 50vh;
+    width: 37vw;
+    height: 33vh;
+    top: 35vh;
+    left: 30vw;
+    z-index: 1;
     animation-play-state: paused;
     animation: volant 1s steps(25) infinite;
 }
 
-@keyframes volant {
+
+/* @keyframes volant {
     0% {
         background-position: 0 0;
     }
@@ -432,26 +541,13 @@ header {
         background-position: 0 -2500%;
     }
 }
+ */
 
 
 /*  FIN DU SPRITESHEET VOLANT */
 
 
 /* DÉBUT SPRITESHEET FEU START */
-
-#chapitre-4 .feu {
-    position: absolute;
-    background-image: url("../img/spritesheet/spritesheet-feu.png");
-    width: 9.5vw;
-    height: 16.6vh;
-    background-size: 100% 2000%;
-    animation-name: feu;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(20);
-    right: 19vw;
-    bottom: -0.05vh;
-}
 
 
 /* @keyframes feu {
