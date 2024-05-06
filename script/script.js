@@ -17,25 +17,14 @@ window.addEventListener('scroll', () => {
 });
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
 
 
 
+//DRAW SVG
+gsap.from(".line-1", {duration:1,drawSVG: 0});
 
 
-//apparition du text
-gsap.from('.chp2', {
-    duration: 1,
-    autoAlpha: 0,
-    scale: 0.5,
-    ease: 'power1.out',
-    scrollTrigger: {
-        trigger: '.chp2',
-        start: 'top 80%',
-        end: 'top 20%',
-        toggleActions: 'play none none reverse',
-        markers: true
-    }
-});
 
 
 
@@ -61,21 +50,95 @@ gsap.to('.chp0', {
         end: 'top 100px',
         pin: true,
         scrub: 1,
-        markers: true,
+       // markers: true,
 
     }
 });
+
+// animation du texte
+gsap.from('.chp2', {
+    duration: 1,
+    autoAlpha: 0,
+    xPercent: -100,
+    scale: 0.5,
+    //ease: 'power1.out',
+    scrollTrigger: {
+        trigger: '#chapitre-2',
+       start: 'center center',
+      end: 'bottom top',
+      //  toggleActions: 'play none none reverse',
+        markers: true
+    }
+});
+gsap.from('.chp4', {
+    duration: 3,
+   
+    xPercent: -100,
+    
+    ease: 'power1.out',
+    scrollTrigger: {
+        trigger: '#chapitre-4',
+        start: 'top center',
+        end: 'top 20%',
+        toggleActions: 'play none none reverse',
+        //markers: true
+    }
+});
+gsap.from('.chp5', {
+    duration: 1,
+    autoAlpha: 0,
+    xPercent: -100,
+    scale: 0.5,
+    ease: 'power1.out',
+    scrollTrigger: {
+        trigger: '#chapitre-5',
+        start: 'top center',
+        end: 'top 20%',
+        toggleActions: 'play none none reverse',
+       // markers: true
+    }
+});
+gsap.from('.chp6', {
+    duration: 1,
+    autoAlpha: 0,
+    xPercent: -100,
+    scale: 0.5,
+    ease: 'power1.out',
+    scrollTrigger: {
+        trigger: '#chapitre-7',
+        start: 'top center',
+        end: 'top 20%',
+        toggleActions: 'play none none reverse',
+       // markers: true
+    }
+});
+
+
+
+
+
+
+
 // Animation de la terre qui scale in et out avec le scroll(chapitre1)
 gsap.to('.terre', {
     scrollTrigger: {
         trigger: '#chapitre-1',
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true,
-        markers: true
+        scrub: 1,
+     //   markers: true
     },
     scale: 0.5,
     ease: 'none'
+});
+gsap.to("#chapitre-1", {
+    scrollTrigger: {
+        trigger: "#chapitre-1",
+        start: "top top",
+        end: () => "+=" + document.querySelector("#chapitre-3").offsetHeight,
+      //  pin: true,
+        scrub: true
+    }
 });
 
 // Animation de la métorite qui s'avance vers la terre (chapitre1)
@@ -85,15 +148,14 @@ gsap.to('.meteorite', {
         trigger: '#chapitre-1',
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true,
-        markers: true
+        scrub: 1,
+        //markers: true,
     },
     x: '40vw',
     ease: 'none'
 });
 
-
-// animation de kevin qui slide vers le bas dans une trappe(chapitre2)
+//(chapitre 2)
 function animationKevin() {
     const kevin = document.querySelector('#chapitre-2 .kevin');
 
@@ -117,11 +179,15 @@ function animationKevin() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    animationKevin();
+});
 
 
 
 
-// (chapitre3)
+
+// (chapitre 3)
 function animateElements() {
     const pince = document.querySelector('#chapitre-3 .pince');
     const casque = document.querySelector('#chapitre-3 .casque');
@@ -129,11 +195,20 @@ function animateElements() {
     // Animation timeline des elements qui doit aller en haut et en bas
     const tl = gsap.timeline({
         scrollTrigger: {
-            trigger: pince,
-            start: 'top 30%',
+            trigger: "#chapitre-3",
+            start: 'top 10%',
             end: 'bottom center',
             scrub: true,
-            markers: true
+           // markers: true
+        }
+    });
+    gsap.to("#chapitre-3", {
+        scrollTrigger: {
+            trigger: "#chapitre-3",
+            start: "top top",
+            end: () => "+=" + document.querySelector("#chapitre-3").offsetHeight,
+            pin: true,
+            scrub: true
         }
     });
 
@@ -219,7 +294,27 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Animation du volant qui tourne de droite a gauche(chapitre5)
+const bombeTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#chapitre-6 .bombe',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+        pin: true,
+        //markers: true
+    }
+});
+
+// Animation de la bombe qui se fait lancer
+bombeTimeline.to('#chapitre-6 .bombe', {
+    y: 300,
+    x: 500,
+    rotation: 720,
+    duration: 10,
+    ease: 'power1.out'
+});
+
+// Animation du volant qui tourne de droite a gauche
 function animationVolant() {
     const volant = document.querySelector('.volant');
 
@@ -229,44 +324,37 @@ function animationVolant() {
             trigger: '#chapitre-5',
             start: 'top 20%',
             end: 'bottom center',
-            scrub: true
+            scrub: true,
+            repeat:-1,
         }
     });
-
+   
 
     tl.to(volant, {
         backgroundPositionY: '2500%',
-        duration: 1,
+        duration: 5,
         ease: 'steps(25)',
 
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
     animationVolant();
+
+    gsap.to("#chapitre-5", {
+        scrollTrigger: {
+            trigger: "#chapitre-5",
+            start: "top top",
+            
+            pin: true,
+            scrub: true
+        }
+    });
+
+
+
+
+
 });
-
-
-// Animation de la bombe qui se fait lancer
-const bombeTimeline = gsap.timeline({
-    scrollTrigger: {
-        trigger: '#chapitre-6 .bombe',
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true,
-        pin: true,
-        markers: true
-    }
-});
-
-bombeTimeline.to('#chapitre-6 .bombe', {
-    y: -300,
-    x: 500,
-    rotation: 720,
-    duration: 3,
-    ease: 'power1.out'
-});
-
-
 
 
 // animation de la météorite qui explose

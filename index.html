@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projet Scrollytelling encadré par Marie-Michelle Ouellette dans un cadre éducatif. TIM Montmorency">
-    <title>Vers l'infini et l'espace!</title>
+    <title>Vers l'infini et l'espace!!</title>
     <link rel="icon" type="image/x-icon" href="">
     <link rel="stylesheet" href="css/style.css">
     <link rel="favicon" href="img/autres/favicon.png" />
@@ -15,7 +15,7 @@
 <body>
     <!-- ---------- Début Écran d'introduction -------- -->
     <header>
-        <h1 class="title">Vers l'infini et l'espace!</h1>
+        <h1 class="title">Vers l'infini et l'espace!!</h1>
         <div class="scroll">
             <img class="roue" src="img/autres/scroll1.png" alt="">
             <img class="souris" src="img/autres/scroll2.png" alt="">
@@ -79,6 +79,7 @@
             <ul class="technique-gsap">
                 <li>déplacement sur Y, de Kevin</li>
                 <li>gsap.timeline()</li>
+                <li>gsap.to()</li>
                 <li>scrollTrigger
                     <ul>
                         <li>trigger=</li>
@@ -86,23 +87,15 @@
                         <li>scrub</li>
                         <li>pin</li>
                         <li>pin spacing</li>
+                        <li>duration</li>
+                        <li>scale</li>
+                        <li>ease</li>
+                        <li>y</li>
                     </ul>
                 </li>
             </ul>
             <p class="chp2">En voyant cela aux nouvelles Kevin ferma la télévision et se précipita dans son garage en utilisant une trappe en dessous de son sofa</p>
-            <ul class="technique-gsap">
-
-                <li>gsap.to()</li>
-                <li>scrollTrigger(coming soon but for now)
-                    <ul>
-                        <li>duration</li>
-                        <li>y</li>
-                        <li>scale</li>
-                        <li>ease</li>
-                        <li>pin spacing</li>
-                    </ul>
-                </li>
-            </ul>
+            
             <div class="image-container">
                 <img class="kevin" src="img/elements_chap2/kevin.svg" alt="kevin" />
                 <img class="sofa" src="img/elements_chap2/sofa.svg" alt="sofa" />
@@ -155,7 +148,7 @@
                     </ul>
                 </li>
             </ul>
-            <p class="chp2">Il s'envola vers l'infini et l'espace.</p>
+            <p class="chp4">Il s'envola vers l'infini et l'espace.</p>
             <div class="image-container">
 
                 <!-- <img class="kevin" src="img/elements_chap4/kevin.svg" alt="kevin" /> -->
@@ -188,11 +181,15 @@
                     </ul>
                 </li>
             </ul>
-            <p class="chp2">Direction la météorite!</p>
+            <p class="chp5">Direction la météorite!</p>
             <div class="image-container">
                 <img class="kevin" src="img/elements_chap5/kevin.svg" alt="kevin" />
                 <div class="volant"></div>
                 <img class="bombe" src="img/elements_chap5/bombe.svg" alt="bombe" />
+                <svg id="line-1" width="127" height="127" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="path-1" d="M0.99997 64C0.99997 64 2.49997 -1.40667e-05 63 0.999986C123.5 1.99999 126 64 126 64C126 64 126 127.5 63 126C-3.05176e-05 124.5 0.99997 64 0.99997 64Z" stroke="white"/>
+                    </svg>
+                    
 
             </div>
             <!-- ---------- Fin Chapitre 5 -------------------- -->
@@ -212,7 +209,7 @@
                     </ul>
                 </li>
             </ul>
-            <p class="chp2">Après avoir atterri sur la météorite,il lance la bombe le plus fort possible</p>
+            <p class="chp6">Après avoir atterri sur la météorite,il lance la bombe le plus fort possible</p>
 
             <div class="image-container">
                 <div class="feu"></div>
@@ -241,7 +238,7 @@
                     </ul>
                 </li>
             </ul>
-            <p class="chp2">La météorite explose en trois morceaux</p>
+            <p class="chp7">La météorite explose en trois morceaux</p>
             <div class="image-container">
                 <img class="meteorite1" src="img/elements_chap7/meteorite_p1.svg" alt=" morceaumeteorite1">
                 <img class="meteorite2" src="img/elements_chap7/meteorite_p2.svg" alt="morceaumeteorite2">
@@ -269,7 +266,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
 
     <script src="script/script.js"></script>
 

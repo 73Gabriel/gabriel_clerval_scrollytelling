@@ -200,12 +200,47 @@ footer {
     color: var(--blanc);
     z-index: 2;
 }
+.chp3 {
+    font-size: 40px;
+    top: 20vh;
+    text-align: center;
+    color: var(--blanc);
+    z-index: 2;
+}
 
 #chapitre-2 .sofa {
     width: 29.32vw;
     height: 40.64vh;
-    top: 50vh;
+    top: 52vh;
     right: 35vw;
+}
+.chp4 {
+    font-size: 40px;
+    top: 20vh;
+    text-align: center;
+    color: var(--blanc);
+    z-index: 2;
+}
+.chp5 {
+    font-size: 40px;
+    top: 20vh;
+    text-align: center;
+    color: var(--blanc);
+    z-index: 2;
+}
+.chp6 {
+    font-size: 40px;
+    top: 20vh;
+    text-align: center;
+    color: var(--blanc);
+    z-index: 2;
+}
+.chp7 {
+    font-size: 40px;
+    top: 20vh;
+    text-align: center;
+    color: var(--blanc);
+    z-index: 2;
 }
 
 #chapitre-2 {
@@ -278,8 +313,8 @@ footer {
     position: absolute;
     width: 8.75vw;
     height: 13.98vh;
-    top: 36vh;
-    left: 44.5vw;
+    top: 35vh;
+    left: 44.2vw;
     transform: translate(-50%, -50%);
 }
 
@@ -455,8 +490,8 @@ footer {
 
 #chapitre-6 .bombe {
     position: absolute;
-    top: 70vh;
-    left: 40vw;
+   top:-50vh;
+    left: 50vw;
 }
 
 .explosion {
@@ -545,6 +580,14 @@ ul.technique-gsap {
 ul.technique-gsap li {
     margin: 5px 0;
 }
+/*---------------------------------------------------------- 
+# DRAW SVG
+----------------------------------------------------------*/
+
+
+
+
+
 
 
 /* testing des animations spritesheet(2.2a)*/
@@ -565,7 +608,7 @@ ul.technique-gsap li {
     animation: volant 1s steps(25) infinite;
 }
 
-@keyframes volant {
+/*@keyframes volant {
     0% {
         background-position: 0 0;
     }
@@ -595,7 +638,7 @@ ul.technique-gsap li {
     bottom: 16vh;
 }
 
-@keyframes feu {
+/*@keyframes feu {
     from {
         background-position: 0 0;
     }
