@@ -165,6 +165,7 @@ footer {
     height: 24.44vh;
     top: 50vh;
     right: 1vw;
+    position: absolute;
     transform: translate(-50%, -50%);
 }
 
@@ -333,7 +334,7 @@ footer {
     height: 16.6vh;
     background-size: 100% 2000%;
     right: 36vw;
-    bottom: 16vh;
+    bottom: 1vh;
 }
 
 #chapitre-4 .fusee {
@@ -350,16 +351,16 @@ footer {
     object-fit: contain;
     width: 65.2vw;
     height: 30.92vh;
-    bottom: 6vh;
+    top: 6vh;
     left: 15vw;
 }
 
 .nuage2 {
     position: absolute;
     object-fit: contain;
-    width: 29.89vw;
+    width: 28.49vw;
     height: 17.2vh;
-    bottom: 1vh;
+    top: 6vh;
     right: 8.5vw;
 }
 
