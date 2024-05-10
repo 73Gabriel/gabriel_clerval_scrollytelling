@@ -5,13 +5,16 @@
 :root {
     --starwars: #ffe031;
     --blanc: white;
+    --noir: black;
     --footer: #0d0e20;
+    --rouge: red;
 }
 
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    font-family: cursive;
 }
 
 @media screen and (min-width: 768px) {
@@ -47,7 +50,7 @@ footer {
 
 .description {
     color: var(--blanc);
-    font-size: 11px;
+    font-size: 1vw;
     width: 100%;
     position: absolute;
     bottom: 10px;
@@ -76,8 +79,6 @@ footer {
     position: relative;
     z-index: 2;
     transform: scale(0.6);
-    /* animation: updown 1s ease-in-out infinite alternate; */
-    /* Commented out */
 }
 
 
@@ -112,11 +113,12 @@ footer {
 
 .chp0 {
     position: absolute;
-    bottom: 20vh;
-    width: 100%;
+    bottom: 30vh;
+    left: 5vw;
+    width: 90vw;
     text-align: center;
-    transform-origin: 50% 100%;
-    font-size: 3rem;
+    transform-origin: bottom center;
+    font-size: 2rem;
     color: var(--starwars);
     white-space: pre-wrap;
 }
@@ -147,8 +149,9 @@ footer {
 #chapitre-1 .meteorite {
     position: absolute;
     top: 10vh;
+    width: 20.83vw;
+    height: 33.3vh;
     left: 1vw;
-    transition: transform 0.3s ease-in-out;
 }
 
 #chapitre-1 .terre {
@@ -157,7 +160,6 @@ footer {
     height: 66.75vw;
     bottom: 10vh;
     right: 20vw;
-    transition: transform 0.3s ease-in-out;
 }
 
 #chapitre-1 .lune {
@@ -199,7 +201,9 @@ footer {
     text-align: center;
     color: var(--blanc);
     z-index: 2;
+    opacity: 0;
 }
+
 .chp3 {
     font-size: 40px;
     top: 20vh;
@@ -214,13 +218,16 @@ footer {
     top: 52vh;
     right: 35vw;
 }
+
 .chp4 {
     font-size: 40px;
-    top: 20vh;
+    top: 90vh;
+    position: relative;
     text-align: center;
-    color: var(--blanc);
+    color: var(--noir);
     z-index: 2;
 }
+
 .chp5 {
     font-size: 40px;
     top: 20vh;
@@ -228,6 +235,7 @@ footer {
     color: var(--blanc);
     z-index: 2;
 }
+
 .chp6 {
     font-size: 40px;
     top: 20vh;
@@ -235,7 +243,24 @@ footer {
     color: var(--blanc);
     z-index: 2;
 }
+
 .chp7 {
+    font-size: 40px;
+    top: 20vh;
+    text-align: center;
+    color: var(--blanc);
+    z-index: 2;
+}
+
+.chp8 {
+    font-size: 40px;
+    bottom: 15vh;
+    text-align: center;
+    color: var(--starwars);
+    z-index: 2;
+}
+
+.chp9 {
     font-size: 40px;
     top: 20vh;
     text-align: center;
@@ -368,8 +393,8 @@ footer {
     width: 9.5vw;
     height: 16.6vh;
     background-size: 100% 2000%;
-    right: 36vw;
-    bottom: 1vh;
+    right: 25.6vw;
+    bottom: 0vh;
 }
 
 #chapitre-4 .fusee {
@@ -377,26 +402,36 @@ footer {
     object-fit: contain;
     width: 20.36vw;
     height: 77vh;
-    left: 59.5vw;
+    left: 70vw;
     bottom: 4vh;
 }
 
-.nuage1 {
+#chapitre-4 .nuage1 {
     position: absolute;
     object-fit: contain;
     width: 65.2vw;
     height: 30.92vh;
     top: 6vh;
-    left: 15vw;
+    left: 69vw;
 }
 
-.nuage2 {
+#chapitre-4 .nuage2 {
     position: absolute;
     object-fit: contain;
     width: 28.49vw;
     height: 17.2vh;
     top: 6vh;
-    right: 8.5vw;
+    left: 69vw;
+}
+
+
+/*#chapitre-4 .nuage3 {
+    position: absolute;
+    object-fit: contain;
+    width: 28.49vw;
+    height: 17.2vh;
+    top: 6vh;
+    left: 55vw;
 }
 
 
@@ -414,6 +449,7 @@ footer {
     background-position: center;
     background-size: cover;
     border: 1px solid red;
+    z-index: 1;
 }
 
 #chapitre-5 .kevin {
@@ -423,6 +459,14 @@ footer {
     bottom: -10vh;
     left: 33vw;
     z-index: 2;
+}
+
+#chapitre-5 .meteorite {
+    position: absolute;
+    top: 10vh;
+    left: -9vw;
+    width: 10.83vw;
+    height: 33.3vh;
 }
 
 #chapitre-5 .volant {
@@ -451,7 +495,7 @@ footer {
     width: 27.29vw;
     height: 38.14vh;
     bottom: 0vh;
-    right: 20vh;
+    right: 10vh;
 }
 
 
@@ -490,16 +534,21 @@ footer {
 
 #chapitre-6 .bombe {
     position: absolute;
-   top:-50vh;
-    left: 50vw;
+    bottom: 15vh;
+    left: 33vw;
+    width: 4.010vw;
+    height: 9.07vh;
+    z-index: 2;
 }
 
-.explosion {
+#chapitre-6 .explosion {
     position: absolute;
     object-fit: contain;
-    top: 15vh;
+    width: 54.27vw;
+    height: 96.48vh;
+    top: 30vh;
     right: 13vw;
-    display: none;
+    opacity: 0;
 }
 
 #chapitre-6 .feu {
@@ -580,14 +629,152 @@ ul.technique-gsap {
 ul.technique-gsap li {
     margin: 5px 0;
 }
+
+
+/*---------------------------------------------------------- 
+# chapitre 8
+----------------------------------------------------------*/
+
+#chapitre-8 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("../img/elements_chap7/espace.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+}
+
+#chapitre-8 .mort {
+    position: absolute;
+    width: 5.10vw;
+    height: 21.66vh;
+    bottom: 30vh;
+    left: 30vw;
+}
+
+#chapitre-8 .kevin {
+    position: absolute;
+    width: 30vw;
+    height: 75vh;
+    bottom: 0vh;
+    left: 33vw;
+    z-index: 2;
+    opacity: 0;
+}
+
+
 /*---------------------------------------------------------- 
 # DRAW SVG
 ----------------------------------------------------------*/
 
+#line-1 {
+    position: absolute;
+    stroke-width: 1vw;
+    width: 13.5vw;
+    height: 16.5vh;
+    stroke-width: 1vw;
+    bottom: 18vh;
+    left: 22.5vw;
+    overflow: visible;
+}
+
+#line-2 {
+    position: absolute;
+    stroke-width: 1vw;
+    width: 13.5vw;
+    height: 16.5vh;
+    bottom: 18vh;
+    right: 22.5vw;
+    overflow: visible;
+}
+
+#line-3 {
+    position: absolute;
+    stroke-width: 1vw;
+    width: 5.60vw;
+    height: 16.5vh;
+    bottom: 19.5vh;
+    right: 16vw;
+    overflow: visible;
+}
 
 
+/*---------------------------------------------------------- 
+# MORPH SVG
+----------------------------------------------------------*/
+
+#svg {
+    position: absolute;
+    object-fit: contain;
+    width: 4.010vw;
+    height: 9.07vh;
+    bottom: 15vh;
+    left: 33vw;
+    z-index: 1;
+}
+
+#bombe1 {
+    position: absolute;
+    object-fit: contain;
+    width: 3.90vw;
+    height: 9.07vh;
+    bottom: 15vh;
+    left: 33vw;
+    z-index: 1;
+}
+
+#explosion1 {
+    position: absolute;
+    object-fit: contain;
+    width: 3.90vw;
+    height: 3.90vh;
+    bottom: 15vh;
+    left: 33vw;
+    z-index: 1;
+}
 
 
+/*---------------------------------------------------------- 
+# MOTIONPATHSVG
+----------------------------------------------------------*/
+
+#path-4 {
+    stroke: red;
+    stroke-width: 2px;
+    fill: none;
+    position: absolute;
+    object-fit: contain;
+    width: 157.34vw;
+    height: 85vh;
+    bottom: 30vh;
+    right: 33vw;
+    z-index: 1;
+}
+
+#motion {
+    stroke: red;
+    stroke-width: 2px;
+    fill: none;
+    position: absolute;
+    object-fit: contain;
+    width: 157.34vw;
+    height: 85vh;
+    bottom: 30vh;
+    right: -10vw;
+    z-index: 1;
+}
+
+#chapitre-8 .kevin {
+    position: absolute;
+    width: 30vw;
+    height: 75vh;
+    bottom: 0vh;
+    left: 50vw;
+    z-index: 2;
+}
 
 
 /* testing des animations spritesheet(2.2a)*/
@@ -607,6 +794,7 @@ ul.technique-gsap li {
     animation-play-state: paused;
     animation: volant 1s steps(25) infinite;
 }
+
 
 /*@keyframes volant {
     0% {
@@ -637,6 +825,7 @@ ul.technique-gsap li {
     right: 36vw;
     bottom: 16vh;
 }
+
 
 /*@keyframes feu {
     from {

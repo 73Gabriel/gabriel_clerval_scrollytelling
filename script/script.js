@@ -16,13 +16,14 @@ window.addEventListener('scroll', () => {
     }, 100);
 });
 
+gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(DrawSVGPlugin);
 
 
 
 //DRAW SVG
-gsap.from(".line-1", {duration:1,drawSVG: 0});
+gsap.from(".line-1", { duration: 1, drawSVG: 0 });
 
 
 
@@ -31,11 +32,12 @@ gsap.from(".line-1", {duration:1,drawSVG: 0});
 
 // Animation de la souris qui monte et descend dans la section de bienvenue de page
 gsap.to('.scroll', {
-    duration: 1,
+    duration: 2,
     yoyo: true,
     repeat: -1,
     ease: 'easeInOut',
     top: '20%',
+    scrub: 1,
 });
 
 // Animation du texte prologue (chapitre 0)
@@ -50,40 +52,44 @@ gsap.to('.chp0', {
         end: 'top 100px',
         pin: true,
         scrub: 1,
-       // markers: true,
+        // markers: true,
 
     }
 });
+
+
+
+
+
+
+
+
+
+
 
 // animation du texte
-gsap.from('.chp2', {
-    duration: 1,
-    autoAlpha: 0,
-    xPercent: -100,
-    scale: 0.5,
-    //ease: 'power1.out',
-    scrollTrigger: {
-        trigger: '#chapitre-2',
-       start: 'center center',
-      end: 'bottom top',
-      //  toggleActions: 'play none none reverse',
-        markers: true
-    }
+document.addEventListener('DOMContentLoaded', function() {
+
+    const chp2 = document.querySelector('.chp2');
+
+
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: chp2,
+            start: 'top 30%',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    timeline.to(chp2, {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        ease: 'power2.out'
+    });
 });
-gsap.from('.chp4', {
-    duration: 3,
-   
-    xPercent: -100,
-    
-    ease: 'power1.out',
-    scrollTrigger: {
-        trigger: '#chapitre-4',
-        start: 'top center',
-        end: 'top 20%',
-        toggleActions: 'play none none reverse',
-        //markers: true
-    }
-});
+
 gsap.from('.chp5', {
     duration: 1,
     autoAlpha: 0,
@@ -95,7 +101,7 @@ gsap.from('.chp5', {
         start: 'top center',
         end: 'top 20%',
         toggleActions: 'play none none reverse',
-       // markers: true
+        // markers: true
     }
 });
 gsap.from('.chp6', {
@@ -109,7 +115,7 @@ gsap.from('.chp6', {
         start: 'top center',
         end: 'top 20%',
         toggleActions: 'play none none reverse',
-       // markers: true
+        // markers: true
     }
 });
 
@@ -126,7 +132,7 @@ gsap.to('.terre', {
         start: 'top bottom',
         end: 'bottom top',
         scrub: 1,
-     //   markers: true
+        //   markers: true
     },
     scale: 0.5,
     ease: 'none'
@@ -136,7 +142,7 @@ gsap.to("#chapitre-1", {
         trigger: "#chapitre-1",
         start: "top top",
         end: () => "+=" + document.querySelector("#chapitre-3").offsetHeight,
-      //  pin: true,
+        //  pin: true,
         scrub: true
     }
 });
@@ -199,7 +205,7 @@ function animateElements() {
             start: 'top 10%',
             end: 'bottom center',
             scrub: true,
-           // markers: true
+            // markers: true
         }
     });
     gsap.to("#chapitre-3", {
@@ -233,6 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
     animateElements();
 });
 
+
+
+//DÉBUT ANIMATION CHAPITRE 4
+
 //spritesheet feu
 function feu() {
     const spritesheet = document.querySelector('#chapitre-4 .feu');
@@ -262,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Animation du paralaxe avec la fusee dans le chapitre 4
 document.addEventListener("DOMContentLoaded", function() {
-
     gsap.to("#chapitre-4", {
         scrollTrigger: {
             trigger: "#chapitre-4",
@@ -273,7 +282,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#chapitre-4",
@@ -283,38 +291,92 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
-    tl.to("#chapitre-4 .feu", {
-            y: -900,
-            ease: "none"
-        })
+    tl.to("#chapitre-4 .feu", { y: -900, ease: "none" })
         .to("#chapitre-4 .nuage1", { y: 700, ease: "none" }, 0)
         .to("#chapitre-4 .nuage2", { y: 700, ease: "none" }, 0)
+        .to("#chapitre-4 .nuage3", { y: 700, ease: "none" }, 0)
+        .to("#chapitre-4 #chp4", { y: 700, ease: "none" }, 0)
         .to("#chapitre-4 .fusee", { y: -900, ease: "none" }, 0);
 });
+//chapitre 4
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.to("#chapitre-4", {
+        scrollTrigger: {
+            trigger: "#chapitre-4",
+            start: "top top",
+            end: () => "+=" + document.querySelector("#chapitre-4").offsetHeight,
+
+            scrub: true
+        }
+    });
 
 
-const bombeTimeline = gsap.timeline({
-    scrollTrigger: {
-        trigger: '#chapitre-6 .bombe',
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true,
-        pin: true,
-        //markers: true
-    }
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#chapitre-4",
+            start: "top top",
+            end: () => "+=" + document.querySelector("#chapitre-4").offsetHeight,
+            scrub: true
+        }
+    });
+
+
+    tl.to(".chp4", {
+        y: () => -(document.querySelector("#chapitre-4").offsetHeight * 0.5),
+        ease: "none"
+    });
+});
+//fin parallax text chapitre 4
+
+//FIN ANIMATION CHAPITRE 4
+
+
+
+//(chapitre 5)
+function animateSVGPath(path) {
+    gsap.timeline({
+            repeat: -1,
+            scrollTrigger: {
+                trigger: "#chapitre-5",
+            },
+        })
+        .to(path, { duration: 0.5, drawSVG: "25% 25%" })
+        .to(path, { duration: 0.5, drawSVG: "25% 75%" })
+        .to(path, { duration: 0.5, drawSVG: "50% 50%" })
+        .to(path, { duration: 0.5, drawSVG: "75% 75%" })
+        .to(path, { duration: 0.5, drawSVG: "100% 100%" })
+        .to(path, { duration: 0.5, drawSVG: "75% 75%" })
+        .to(path, { duration: 0.5, drawSVG: "50% 50%" })
+        .to(path, { duration: 0.5, drawSVG: "25% 75%" })
+        .to(path, { duration: 0.5, drawSVG: "0% 25%" });
+}
+animateSVGPath("#path-1");
+animateSVGPath("#path-2");
+animateSVGPath("#path-3");
+
+//APPARITION DE LA MÉTÉORITE CHAPITRE 5
+document.addEventListener("DOMContentLoaded", function() {
+    const meteorite = document.querySelector('#chapitre-5 .meteorite');
+    gsap.set(meteorite, { opacity: 0 });
+    const meteoriteTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#chapitre-5",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1
+        }
+    });
+    meteoriteTimeline.to(meteorite, {
+        opacity: 2,
+        x: 900,
+        duration: 3,
+
+        ease: "power2.out"
+    });
 });
 
-// Animation de la bombe qui se fait lancer
-bombeTimeline.to('#chapitre-6 .bombe', {
-    y: 300,
-    x: 500,
-    rotation: 720,
-    duration: 10,
-    ease: 'power1.out'
-});
 
-// Animation du volant qui tourne de droite a gauche
+// Animation du volant qui tourne de droite a gauche(CHAPITRE 5)
 function animationVolant() {
     const volant = document.querySelector('.volant');
 
@@ -325,10 +387,10 @@ function animationVolant() {
             start: 'top 20%',
             end: 'bottom center',
             scrub: true,
-            repeat:-1,
+            repeat: -1,
         }
     });
-   
+
 
     tl.to(volant, {
         backgroundPositionY: '2500%',
@@ -344,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: "#chapitre-5",
             start: "top top",
-            
+
             pin: true,
             scrub: true
         }
@@ -357,19 +419,119 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// animation de la météorite qui explose
+//fin d'animation chapitre5
+
+
+//ANIMATION CHAPITRE 6
+
+//ANIMATION DE LA BOMBE (CHAPITRE 6)
+document.addEventListener("DOMContentLoaded", function() {
+    const bombe = document.querySelector('#chapitre-6 .bombe');
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#chapitre-6",
+            start: "top 80%",
+            end: "bottom top",
+            scrub: true
+        },
+    });
+
+
+    timeline.to(bombe, {
+        duration: 4,
+        ease: "power2.out",
+        bottom: "70vh",
+        left: "70vw",
+        rotation: -720,
+        opacity: 0
+    });
+
+
+    function showBomb() {
+        gsap.to(bombe, {
+            duration: 1,
+            opacity: 1
+        });
+    }
+
+    ScrollTrigger.create({
+        trigger: "#chapitre-6",
+        start: "top 80%",
+        end: "bottom top",
+        onUpdate: self => {
+            if (self.direction === -1) {
+                showBomb();
+            }
+        }
+    });
+
+    gsap.to("#chapitre-6", {
+        scrollTrigger: {
+            trigger: "#chapitre-6",
+            start: "top top",
+            end: () => "+=" + document.querySelector("#chapitre-6").offsetHeight,
+            pin: true,
+            scrub: true
+        }
+    });
+});
+
+
+//ANIMATION FEU CHAPITRE 6
+function feuchap6() {
+    const spritesheet = document.querySelector('#chapitre-6 .feu');
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: spritesheet,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+
+    tl.to(spritesheet, {
+        backgroundPosition: '0 -2000%',
+        ease: 'steps(20)',
+        duration: 1,
+        repeat: -1
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    feuchap6();
+});
+
+//FIN ANIMATION CHAPITRE
+
+
+
+
+
+
+
+
+
+
+// animation de la météorite qui explose(CHAPITRE 7)
 function animationMeteorites() {
     const meteorite1 = document.querySelector('.meteorite1');
     const meteorite2 = document.querySelector('.meteorite2');
     const meteorite3 = document.querySelector('.meteorite3');
 
-
     gsap.to(meteorite1, {
         x: -2000,
         duration: 2,
         ease: 'power1.inOut',
-        repeat: -1,
-        yoyo: true
+
+        yoyo: true,
+        scrollTrigger: {
+            trigger: meteorite1,
+            start: 'top 25%',
+            end: 'bottom top',
+            scrub: true
+        }
     });
 
 
@@ -377,8 +539,14 @@ function animationMeteorites() {
         x: 2000,
         duration: 2,
         ease: 'power1.inOut',
-        repeat: -1,
-        yoyo: true
+
+        yoyo: true,
+        scrollTrigger: {
+            trigger: meteorite2,
+            start: 'top 25%',
+            end: 'bottom top',
+            scrub: true
+        }
     });
 
 
@@ -386,11 +554,112 @@ function animationMeteorites() {
         y: 2000,
         duration: 2,
         ease: 'power1.inOut',
-        repeat: -1,
-        yoyo: true
+
+        yoyo: true,
+        scrollTrigger: {
+            trigger: meteorite3,
+            start: 'top 25%',
+            end: 'bottom top',
+            scrub: true
+        }
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    animationMeteorites();
+
+    ScrollTrigger.refresh();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     animationMeteorites();
 });
+
+//SECTION MORPHSVG
+
+// animation de la bombe(morphed)qui se fait lancer
+document.addEventListener("DOMContentLoaded", function() {
+    const svg = document.querySelector('#svg');
+    const timeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#chapitre-6",
+            start: "top 80%",
+            end: "bottom top",
+            scrub: true,
+            // markers: true
+        }
+    });
+
+
+    timeline.to(svg, {
+        duration: 1,
+        ease: "power2.out",
+        bottom: "70vh",
+        left: "70vw",
+        rotation: -720
+    });
+});
+
+// morph de la bombe(svg)
+
+gsap.registerPlugin(MorphSVGPlugin);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const svg = document.getElementById('svg');
+    const bombePath = svg.querySelector('#bombe');
+    const explosionPath = svg.querySelector('#explosion');
+
+
+    const morphAnimation = gsap.to(bombePath, {
+        morphSVG: { shape: explosionPath },
+        duration: 4,
+        ease: "power2.inOut",
+        paused: true
+    });
+
+
+    ScrollTrigger.create({
+        trigger: svg,
+        start: "top top",
+        end: "+=300vh",
+        scrub: true,
+        onUpdate: self => {
+            morphAnimation.progress(self.progress);
+            const scaleFactor = 1 + self.progress * 60;
+            gsap.set(svg, { scale: scaleFactor });
+        }
+    });
+});
+
+// FIN SECTION MORPHSVG
+
+
+//SECTION MOTIONPATH SVG
+document.addEventListener("DOMContentLoaded", function() {
+    const mort = document.querySelector('.mort');
+    const path = document.querySelector('#path-4');
+
+
+    const motionAnimation = gsap.to(mort, {
+        motionPath: {
+            path: path,
+            align: path,
+            alignOrigin: [0.5, 0.5],
+            autoRotate: true,
+        },
+        duration: 20,
+    });
+
+
+    ScrollTrigger.create({
+        trigger: '#chapitre-8',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: 1,
+        onUpdate: self => {
+            motionAnimation.progress(self.progress);
+        }
+    });
+});
+//FIN DE SECTION MOTIONPATH SVG
