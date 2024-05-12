@@ -196,7 +196,7 @@ footer {
 }
 
 .chp2 {
-    font-size: 40px;
+    font-size: 1.5rem;
     top: 20vh;
     text-align: center;
     color: var(--blanc);
@@ -229,19 +229,22 @@ footer {
 }
 
 .chp5 {
+    position: relative;
     font-size: 40px;
-    top: 20vh;
+    top: 10vh;
     text-align: center;
     color: var(--blanc);
     z-index: 2;
+    opacity: 0;
 }
 
 .chp6 {
     font-size: 40px;
+    position: relative;
     top: 20vh;
     text-align: center;
     color: var(--blanc);
-    z-index: 2;
+    z-index: 0;
 }
 
 .chp7 {
@@ -254,7 +257,8 @@ footer {
 
 .chp8 {
     font-size: 40px;
-    bottom: 15vh;
+    bottom: 0vh;
+    left: 50vw;
     text-align: center;
     color: var(--starwars);
     z-index: 2;
@@ -262,7 +266,8 @@ footer {
 
 .chp9 {
     font-size: 40px;
-    top: 20vh;
+    bottom: 0vh;
+    left: 50vw;
     text-align: center;
     color: var(--blanc);
     z-index: 2;
@@ -467,6 +472,7 @@ footer {
     left: -9vw;
     width: 10.83vw;
     height: 33.3vh;
+    z-index: -1;
 }
 
 #chapitre-5 .volant {
@@ -587,7 +593,7 @@ footer {
     height: 36.01vh;
     position: absolute;
     object-fit: contain;
-    left: 32vw;
+    left: 32.2vw;
     top: 25vh;
 }
 
@@ -596,7 +602,7 @@ footer {
     height: 42.5vh;
     position: absolute;
     object-fit: contain;
-    left: 47.1vw;
+    left: 45.7vw;
     top: 28.9vh;
 }
 
@@ -606,7 +612,7 @@ footer {
     position: absolute;
     object-fit: contain;
     left: 35.6vw;
-    top: 51vh;
+    top: 47vh;
 }
 
 ul.technique-gsap {
@@ -660,9 +666,8 @@ ul.technique-gsap li {
     width: 30vw;
     height: 75vh;
     bottom: 0vh;
-    left: 33vw;
+    right: 30vw;
     z-index: 2;
-    opacity: 0;
 }
 
 
@@ -742,7 +747,7 @@ ul.technique-gsap li {
 ----------------------------------------------------------*/
 
 #path-4 {
-    stroke: red;
+    stroke: var(--noir);
     stroke-width: 2px;
     fill: none;
     position: absolute;
@@ -752,6 +757,7 @@ ul.technique-gsap li {
     bottom: 30vh;
     right: 33vw;
     z-index: 1;
+    opacity: 0.5;
 }
 
 #motion {
@@ -773,7 +779,7 @@ ul.technique-gsap li {
     height: 75vh;
     bottom: 0vh;
     left: 50vw;
-    z-index: 2;
+    z-index: -1;
 }
 
 
