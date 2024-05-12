@@ -16,9 +16,9 @@ window.addEventListener('scroll', () => {
     }, 100);
 });
 
-gsap.registerPlugin(MotionPathPlugin);
+//gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(DrawSVGPlugin);
+//gsap.registerPlugin(DrawSVGPlugin);
 
 
 
@@ -42,18 +42,18 @@ gsap.to('.scroll', {
 
 
 gsap.to('.chp0', {
-    duration: 20,
-    y: '900%',
+    duration: 30,
+    y: '500%',
     scale: 1,
-    ease: "power1.in",
+    ease: "power1.inOut",
     scrollTrigger: {
         trigger: '.chp0',
-        start: 'top 20%',
-        end: 'top 100px',
+        start: 'top top',
+        end: 'bottom top',
         pin: true,
         scrub: 1,
-        // markers: true,
 
+        // markers: true,
     }
 });
 
@@ -117,7 +117,7 @@ gsap.from('.chp6', {
 gsap.to('.terre', {
     scrollTrigger: {
         trigger: '#chapitre-1',
-        start: 'top bottom',
+        start: 'top top',
         end: 'bottom top',
         scrub: 1,
         // markers: true
@@ -139,7 +139,7 @@ gsap.to("#chapitre-1", {
 gsap.to('.meteorite', {
     scrollTrigger: {
         trigger: '#chapitre-1',
-        start: 'top bottom',
+        start: 'top top',
         end: 'bottom top',
         scrub: 1,
         // markers: true,
@@ -277,12 +277,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    tl.to("#chapitre-4 .feu", { y: -900, ease: "none" })
-        .to("#chapitre-4 .nuage1", { y: 700, ease: "none" }, 0)
-        .to("#chapitre-4 .nuage2", { y: 700, ease: "none" }, 0)
-        .to("#chapitre-4 .nuage3", { y: 700, ease: "none" }, 0)
-        .to("#chapitre-4 #chp4", { y: 700, ease: "none" }, 0)
-        .to("#chapitre-4 .fusee", { y: -900, ease: "none" }, 0);
+    tl.to("#chapitre-4 .feu", { y: -950, ease: "power2.inOut" })
+        .to("#chapitre-4 .nuage1", { y: 700, ease: "power2.inOut" }, 0)
+        .to("#chapitre-4 .nuage2", { y: 700, ease: "power2.inOut" }, 0)
+        .to("#chapitre-4 .nuage3", { y: 700, ease: "power2.inOut" }, 0)
+        .to("#chapitre-4 #chp4", { y: 50, ease: "power2.inOut" }, 0)
+        .to("#chapitre-4 .fusee", { y: -950, ease: "power2.inOut" }, 0);
 });
 //chapitre 4
 document.addEventListener("DOMContentLoaded", function() {
@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /*(chapitre 5)*/
 
-function animateSVGPath(path) {
+/*function animateSVGPath(path) {
     gsap.timeline({
             repeat: -1,
             scrollTrigger: {
@@ -339,7 +339,7 @@ function animateSVGPath(path) {
 
 animateSVGPath("#path-1");
 animateSVGPath("#path-2");
-animateSVGPath("#path-3");
+animateSVGPath("#path-3");*/
 
 //animation de la météorite chapitre 5
 document.addEventListener("DOMContentLoaded", function() {
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const meteoriteTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: "#chapitre-5",
-            start: "top center",
+            start: "top top",
             end: "bottom center",
             scrub: 1
         }
@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*SECTION MORPHSVG(CHAPITRE 6)*/
 
 // animation de la bombe(morphed)qui se fait lancer
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     const svg = document.querySelector('#svg');
     const bombePath = document.querySelector('#bombe1');
     const explosionPath = document.querySelector('#explosion1');
@@ -615,7 +615,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // FIN SECTION MORPHSVG
 
 /*SECTION MOTIONPATH SVG(CHAPITRE 8)*/
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     const mort = document.querySelector('.mort');
     const path = document.querySelector('#path-4');
 
@@ -692,7 +692,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ease: "power2.out"
     });
 });
-
+*/
 
 //OPACITÉ MORT DE KEVIN
 const invisible = document.querySelector('#chapitre-8 .kevin');
