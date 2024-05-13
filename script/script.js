@@ -16,9 +16,9 @@ window.addEventListener('scroll', () => {
     }, 100);
 });
 
-//gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
-//gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(DrawSVGPlugin);
 
 
 
@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /*(chapitre 5)*/
 
-/*function animateSVGPath(path) {
+function animateSVGPath(path) {
     gsap.timeline({
             repeat: -1,
             scrollTrigger: {
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 animateSVGPath("#path-1");
 animateSVGPath("#path-2");
-animateSVGPath("#path-3");*/
+animateSVGPath("#path-3");
 
 //animation de la météorite chapitre 5
 document.addEventListener("DOMContentLoaded", function() {
@@ -573,7 +573,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*SECTION MORPHSVG(CHAPITRE 6)*/
 
 // animation de la bombe(morphed)qui se fait lancer
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const svg = document.querySelector('#svg');
     const bombePath = document.querySelector('#bombe1');
     const explosionPath = document.querySelector('#explosion1');
@@ -622,7 +622,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // FIN SECTION MORPHSVG
 
 /*SECTION MOTIONPATH SVG(CHAPITRE 8)*/
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const mort = document.querySelector('.mort');
     const path = document.querySelector('#path-4');
 
