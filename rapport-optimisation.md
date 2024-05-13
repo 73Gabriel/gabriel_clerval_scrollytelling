@@ -37,3 +37,6 @@ Il y a des elements qui ne contient pas de width et de height lorsqu'il n'y a pa
 
 ### Résultat:
 Il y a maintenant un width réglant le prblème du width et de height dans le site pagespeed
+
+## [Report from May 12, 2024, 8:41:49 PM ](https://pagespeed.web.dev/analysis/https-gabriel-tim-momo-com/dfr534tjhy?form_factor=mobile)
+la performance du téléphone a grandement augmenté depuis l'ancien rapport et tout les autres chiffres sont bien augmentés.
