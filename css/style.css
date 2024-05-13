@@ -59,7 +59,8 @@ footer {
 }
 
 .scroll {
-    width: 100%;
+    width: 100vw;
+    height: 20vh;
     position: absolute;
     text-align: center;
     right: 40px;
@@ -394,7 +395,7 @@ footer {
 
 #chapitre-4 .feu {
     position: absolute;
-    background-image: url("../img/spritesheet/spritesheet-feu.png");
+    background-image: url("../img/spritesheet/spritesheet-feu.webp");
     width: 9.5vw;
     height: 16.6vh;
     background-size: 100% 2000%;
@@ -477,7 +478,7 @@ footer {
 
 #chapitre-5 .volant {
     position: absolute;
-    background-image: url('../img/spritesheet/spritesheet-volant.png');
+    background-image: url('../img/spritesheet/spritesheet-volant.webp');
     background-size: 100% 2500%;
     width: 37vw;
     height: 33vh;
@@ -559,7 +560,7 @@ footer {
 
 #chapitre-6 .feu {
     position: absolute;
-    background-image: url("../img/spritesheet/spritesheet-feu.png");
+    background-image: url("../img/spritesheet/spritesheet-feu.webp");
     width: 8.010vw;
     height: 11.07vh;
     animation-name: feu;
@@ -790,7 +791,7 @@ ul.technique-gsap li {
 
 .volant {
     position: absolute;
-    background-image: url('../img/spritesheet/spritesheet-volant.png');
+    background-image: url('../img/spritesheet/spritesheet-volant.webp');
     background-size: 100% 2500%;
     width: 37vw;
     height: 33vh;
@@ -819,7 +820,7 @@ ul.technique-gsap li {
 
 .feu {
     position: absolute;
-    background-image: url("../img/spritesheet/spritesheet-feu.png");
+    background-image: url("../img/spritesheet/spritesheet-feu.webp");
     width: 9.5vw;
     height: 16.6vh;
     animation-name: feu;

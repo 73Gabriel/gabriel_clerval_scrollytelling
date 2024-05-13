@@ -1,0 +1,650 @@
+.description,
+.title,
+footer {
+    color: var(--blanc)
+}
+
+.description,
+.title,
+body {
+    font-family: cursive
+}
+
+.description,
+.scroll {
+    width: 100%;
+    text-align: center
+}
+
+.chp0,
+.description,
+.scroll,
+.title,
+footer {
+    text-align: center
+}
+
+#chapitre-1 .lune,
+#chapitre-3 .casque,
+#chapitre-3 .pince {
+    transform: translate(-50%, -50%)
+}
+
+#chapitre-1,
+#chapitre-2,
+#chapitre-3,
+#chapitre-4,
+#chapitre-5,
+#chapitre-6,
+#chapitre-7,
+#chapitre-8,
+#prologue {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border: 1px solid red */
+}
+
+#line-1,
+#line-2 {
+    width: 13.5vw;
+    bottom: 18vh
+}
+
+#line-1,
+#line-2,
+#line-3 {
+    stroke-width: 1vw;
+    height: 16.5vh;
+    overflow: visible
+}
+
+#motion,
+#path-4 {
+    fill: none;
+    width: 157.34vw;
+    height: 85vh
+}
+
+:root {
+    --starwars: #ffe031;
+    --blanc: white;
+    --noir: black;
+    --footer: #0d0e20;
+    --rouge: red
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0
+}
+
+@media screen and (min-width:768px) {
+    body {
+        font-size: 18px
+    }
+}
+
+header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/autres/espace.svg")
+}
+
+footer {
+    background-color: var(--footer);
+    padding: 20px 0
+}
+
+.title {
+    margin-top: 0;
+    padding-top: 20%;
+    font-size: 4vw
+}
+
+.description {
+    font-size: 1vw;
+    position: absolute;
+    bottom: 10px
+}
+
+.scroll {
+    height: 20vh;
+    right: 40px;
+    bottom: 5vh;
+    background-image: url("img/autres/scroll2.png");
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    transform: scale(.6)
+}
+
+.souris {
+    position: absolute
+}
+
+.roue {
+    position: relative;
+    top: 20px;
+    left: 41px
+}
+
+#chapitre-1,
+#prologue {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/elements_chap1/espace.svg");
+    position: relative
+}
+
+.chp0 {
+    position: absolute;
+    bottom: 99vh;
+    left: 5vw;
+    width: 90vw;
+    transform-origin: bottom center;
+    font-size: 2rem;
+    color: var(--starwars);
+    white-space: pre-wrap
+}
+
+#chapitre-2,
+#chapitre-3,
+#chapitre-4,
+#chapitre-5,
+#chapitre-6,
+#chapitre-7,
+#chapitre-8,
+.fond-avant {
+    width: 100vw;
+    height: 100vh
+}
+
+.chp2,
+.chp3,
+.chp7 {
+    color: var(--blanc)
+}
+
+#chapitre-1 .image-container img,
+#chapitre-2 .image-container img,
+#chapitre-3.image-container img,
+#chapitre-4.image-container img {
+    position: absolute;
+    max-width: 100%;
+    height: auto
+}
+
+#chapitre-1 .meteorite {
+    position: absolute;
+    top: 10vh;
+    width: 20.83vw;
+    height: 33.3vh;
+    left: 1vw
+}
+
+#chapitre-1 .terre {
+    position: absolute;
+    width: 37.65vw;
+    height: 66.75vw;
+    bottom: 10vh;
+    right: 20vw
+}
+
+.chp8,
+.chp9 {
+    bottom: 0;
+    z-index: 2
+}
+
+#chapitre-1 .lune {
+    width: 13.75vw;
+    height: 24.44vh;
+    top: 50vh;
+    right: 1vw;
+    position: absolute
+}
+
+#chapitre-2 .image-container,
+#chapitre-3.image-container,
+#chapitre-4.image-container {
+    position: relative;
+    width: 100%;
+    height: auto
+}
+
+#chapitre-2 .kevin {
+    width: 11.4vw;
+    height: 43.51vh;
+    top: 20vh;
+    right: 45vw
+}
+
+.chp2 {
+    font-size: 1.5rem;
+    top: 20vh;
+    text-align: center;
+    z-index: 2;
+    opacity: 0
+}
+
+.chp3,
+.chp4,
+.chp7 {
+    font-size: 40px;
+    text-align: center;
+    z-index: 2
+}
+
+.chp3,
+.chp7 {
+    top: 20vh
+}
+
+#chapitre-2 .sofa {
+    width: 29.32vw;
+    height: 40.64vh;
+    top: 52vh;
+    right: 35vw
+}
+
+.chp4 {
+    top: 90vh;
+    position: relative;
+    color: var(--noir)
+}
+
+.chp5,
+.chp6 {
+    color: var(--blanc);
+    font-size: 40px;
+    text-align: center;
+    position: relative
+}
+
+.chp5 {
+    top: 10vh;
+    z-index: 2;
+    opacity: 0
+}
+
+.chp6 {
+    top: 20vh;
+    z-index: 0
+}
+
+.chp8 {
+    font-size: 40px;
+    left: 50vw;
+    text-align: center;
+    color: var(--starwars)
+}
+
+.chp9 {
+    font-size: 40px;
+    left: 7uk0vw;
+    text-align: center;
+    color: var(--blanc)
+}
+
+#chapitre-2 {
+    background-image: url("../img/elements_chap2/fond.svg");
+    position: relative
+}
+
+.fond-avant {
+    position: absolute;
+    object-fit: cover;
+    object-fit: cover
+}
+
+#chapitre-3 {
+    background-image: url("../img/elements_chap3/fond_arriere.svg");
+    position: relative
+}
+
+#chapitre-3 .kevin {
+    position: absolute;
+    width: 9.53vw;
+    height: 39.53vh;
+    top: 50vh;
+    left: 40vw
+}
+
+#chapitre-3 .pince {
+    position: absolute;
+    width: 12.44vw;
+    height: 41vh;
+    top: 20vh;
+    left: 44vw
+}
+
+#chapitre-3 .casque {
+    position: absolute;
+    width: 8.75vw;
+    height: 13.98vh;
+    top: 35vh;
+    left: 44.2vw
+}
+
+#chapitre-4 img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+#chapitre-4 {
+    background-image: url("../img/elements_chap4/fond.svg");
+    position: relative
+}
+
+#chapitre-4 .kevin {
+    position: absolute;
+    top: 70vh;
+    left: 40vw
+}
+
+#chapitre-4 .feu {
+    position: absolute;
+    background-image: url("../img/spritesheet/spritesheet-feu.webp");
+    width: 9.5vw;
+    height: 16.6vh;
+    background-size: 100% 2000%;
+    right: 25.6vw;
+    bottom: 0
+}
+
+#chapitre-4 .fusee {
+    position: absolute;
+    object-fit: contain;
+    width: 20.36vw;
+    height: 77vh;
+    left: 70vw;
+    bottom: 4vh
+}
+
+#chapitre-4 .nuage1,
+#chapitre-4 .nuage2 {
+    top: 6vh;
+    left: 69vw;
+    position: absolute;
+    object-fit: contain
+}
+
+#chapitre-4 .nuage1 {
+    width: 65.2vw;
+    height: 30.92vh
+}
+
+#chapitre-4 .nuage2 {
+    width: 28.49vw;
+    height: 17.2vh
+}
+
+#chapitre-5 {
+    background-image: url("../img/elements_chap5/fond.svg");
+    position: relative;
+    z-index: 1
+}
+
+#chapitre-5 .kevin {
+    position: absolute;
+    width: 30vw;
+    height: 75vh;
+    bottom: -10vh;
+    left: 33vw;
+    z-index: 2
+}
+
+#chapitre-5 .meteorite {
+    position: absolute;
+    top: 10vh;
+    left: -9vw;
+    width: 10.83vw;
+    height: 33.3vh;
+    z-index: -1
+}
+
+#chapitre-5 .volant,
+.volant {
+    position: absolute;
+    background-image: url('../img/spritesheet/spritesheet-volant.webp');
+    background-size: 100% 2500%;
+    width: 37vw;
+    height: 33vh;
+    top: 35vh;
+    left: 30vw;
+    z-index: 1;
+    animation-play-state: paused;
+    animation: 1s steps(25) infinite volant
+}
+
+#chapitre-6 .feu,
+.feu {
+    background-image: url("../img/spritesheet/spritesheet-feu.webp");
+    animation-name: feu;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    background-size: 100% 2000%
+}
+
+#chapitre-5 .bombe {
+    position: absolute;
+    width: 27.29vw;
+    height: 38.14vh;
+    bottom: 0;
+    right: 10vh
+}
+
+#chapitre-6 {
+    background-image: url("../img/elements_chap6/background.svg");
+    position: relative
+}
+
+#chapitre-6 .fusee {
+    position: absolute;
+    object-fit: contain;
+    width: 15.93vw;
+    height: 60.83vh;
+    left: 10vw;
+    bottom: 4vh
+}
+
+#chapitre-6 .kevin {
+    position: absolute;
+    width: 5.1vw;
+    height: 21.66vh;
+    top: 70vh;
+    left: 30vw
+}
+
+#bombe1,
+#svg {
+    height: 9.07vh
+}
+
+#bombe1,
+#chapitre-6 .bombe,
+#explosion1,
+#svg {
+    bottom: 15vh;
+    left: 33vw
+}
+
+#chapitre-6 .bombe {
+    position: absolute;
+    width: 4.010vw;
+    height: 9.07vh;
+    z-index: 2
+}
+
+#chapitre-6 .explosion {
+    position: absolute;
+    object-fit: contain;
+    width: 54.27vw;
+    height: 96.48vh;
+    top: 30vh;
+    right: 13vw;
+    opacity: 0
+}
+
+#chapitre-6 .feu {
+    position: absolute;
+    width: 8.010vw;
+    height: 11.07vh;
+    animation-duration: .8s;
+    left: 13.5vw;
+    bottom: 3vh
+}
+
+#chapitre-7,
+#chapitre-8 {
+    position: relative;
+    background-image: url("../img/elements_chap7/espace.svg")
+}
+
+#bombe1,
+#chapitre-8 .mort,
+#explosion1,
+#line-1,
+#line-2,
+#line-3,
+#motion,
+#path-4,
+#svg,
+.feu,
+.meteorite1,
+.meteorite2,
+.meteorite3,
+ul.technique-gsap {
+    position: absolute
+}
+
+.meteorite1 {
+    width: 21.45vw;
+    height: 36.01vh;
+    object-fit: contain;
+    left: 32.2vw;
+    top: 25vh
+}
+
+.meteorite2 {
+    width: 18.38vw;
+    height: 42.5vh;
+    object-fit: contain;
+    left: 45.7vw;
+    top: 28.9vh
+}
+
+.meteorite3 {
+    width: 22.34vw;
+    height: 31.48vh;
+    object-fit: contain;
+    left: 35.6vw;
+    top: 47vh
+}
+
+ul.technique-gsap {
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+    font-size: 10px;
+    font-family: monospace;
+    font-weight: 400;
+    width: auto;
+    display: inline-block;
+    padding: 10px 20px 12px;
+    margin: 0;
+    max-width: 300px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+ul.technique-gsap li {
+    margin: 5px 0
+}
+
+#chapitre-8 .mort {
+    width: 5.1vw;
+    height: 21.66vh;
+    bottom: 30vh;
+    left: 30vw
+}
+
+#chapitre-8 .kevin {
+    right: 30vw;
+    position: absolute;
+    width: 30vw;
+    height: 75vh;
+    bottom: 0;
+    left: 50vw;
+    z-index: -1
+}
+
+#line-1 {
+    left: 22.5vw
+}
+
+#line-2 {
+    right: 22.5vw
+}
+
+#line-3 {
+    width: 5.6vw;
+    bottom: 19.5vh;
+    right: 16vw
+}
+
+#svg {
+    object-fit: contain;
+    width: 4.010vw;
+    z-index: 1
+}
+
+#bombe1 {
+    object-fit: contain;
+    width: 3.9vw;
+    z-index: 1
+}
+
+#explosion1 {
+    object-fit: contain;
+    width: 3.9vw;
+    height: 3.9vh;
+    z-index: 1
+}
+
+#path-4 {
+    stroke: var(--noir);
+    stroke-width: 2px;
+    object-fit: contain;
+    bottom: 30vh;
+    right: 33vw;
+    z-index: 1;
+    opacity: .5
+}
+
+#motion {
+    stroke: red;
+    stroke-width: 2px;
+    object-fit: contain;
+    bottom: 30vh;
+    right: -10vw;
+    z-index: 1
+}
+
+.feu {
+    width: 9.5vw;
+    height: 16.6vh;
+    animation-duration: 1s;
+    right: 36vw;
+    bottom: 16vh
+}

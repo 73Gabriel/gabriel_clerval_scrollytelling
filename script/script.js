@@ -53,7 +53,14 @@ gsap.to('.chp0', {
         pin: true,
         scrub: 1,
 
-        // markers: true,
+    }
+});
+gsap.to("#prologue", {
+    scrollTrigger: {
+        trigger: "#prologue",
+        start: "top top",
+        end: () => "+=" + document.querySelector("#prologue").offsetHeight,
+        pin: true,
     }
 });
 
@@ -181,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* (chapitre 3)*/
 
-function animateElements() {
+function pincecasque() {
     const pince = document.querySelector('#chapitre-3 .pince');
     const casque = document.querySelector('#chapitre-3 .casque');
 
@@ -223,7 +230,7 @@ function animateElements() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    animateElements();
+    pincecasque();
 });
 
 
@@ -692,7 +699,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ease: "power2.out"
     });
 });
-*/
+
 
 //OPACITÉ MORT DE KEVIN
 const invisible = document.querySelector('#chapitre-8 .kevin');
@@ -710,7 +717,7 @@ gsap.to('#chapitre-8 .kevin', {
 
 //FIN DE SECTION MOTIONPATH SVG
 
-
+/*apparition du texte(CHAPITRE 5)*/
 document.addEventListener("DOMContentLoaded", function() {
     const chp5 = document.querySelector('#chapitre-5 .chp5');
     gsap.set(chp5, { opacity: 0, y: -50 });
@@ -734,7 +741,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
+/*apparition du texte(CHAPITRE 6)*/
 document.addEventListener("DOMContentLoaded", function() {
     const chp6 = document.querySelector('#chapitre-6 .chp6');
 
@@ -760,7 +767,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+/*apparition du texte(CHAPITRE 7)*/
 document.addEventListener("DOMContentLoaded", function() {
     const chp7 = document.querySelector('#chapitre-7 .chp7');
 
@@ -786,6 +793,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+/*apparition du texte(CHAPITRE 8)*/
 document.addEventListener("DOMContentLoaded", function() {
     const chp9 = document.querySelector('#chapitre-8 .chp9');
 
