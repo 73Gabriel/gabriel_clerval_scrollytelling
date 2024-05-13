@@ -131,7 +131,9 @@ footer {
 .roue {
     position: relative;
     top: 20px;
-    left: 41px
+    left: 41px;
+    width: 14px;
+    height: 14px;
 }
 
 #chapitre-1,
