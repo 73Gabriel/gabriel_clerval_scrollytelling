@@ -2,7 +2,7 @@
 
 [PageSpeed Insights Report from May 12, 2024, 10:20:07 AM ](https://pagespeed.web.dev/analysis/https-gabriel-tim-momo-com/figoh3s3wl?form_factor=desktop)
 
-Il n'y a pas de problèmes présents sur le site, le site semble etre stable avec une moyenne de 95.
+Il n'y a pas de problèmes présents sur le site, le site semble etre stable avec une moyenne de 95.Dans la version mobile il y a une performance de 89 qui sera a corriger.
 
 ## Problème #1
 
